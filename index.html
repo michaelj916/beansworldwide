@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html amp class="crt">
+<head>
+	<title>BEANS</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,  initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="landing/css/landing.css">
+	<link rel="stylesheet" type="text/css" href="landing/css/overlays.css">
+	<link rel="icon" href="/icons/favicon.ico">
+	<script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		function delay (URL) {
+			setTimeout( function() { window.location = URL }, 550 );
+		}
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+	        $("#click-enter").click(function(){
+	            $(".turnon-anim").addClass("turnoff-anim");
+	        });
+
+
+	        $('.turnon-anim').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+	             $(this).removeClass("turnoff-anim");
+	        });
+	    });
+	</script>
+</head>
+<body>
+	<div class="turnon-anim">
+		<div id="click-enter" onclick="delay('main/index.html')"></div>
+	</div>
+</body>
+</html>
