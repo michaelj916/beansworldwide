@@ -605,7 +605,7 @@ body {
     -webkit-font-smoothing: antialiased;
     height: 100%;
     width: 100%;
-    background-image: url('/img/bckgrnd/mcblock.jpg');
+    background-image: url('/bwmedia/img/bckgrnd/mcblock.jpg');
 }
 
 [tabindex="-1"]:focus {
