@@ -1,2 +1,2 @@
 # beansworldwide
-a repo of the official worldwide site
+a repo of the official beansworldwide.com site
