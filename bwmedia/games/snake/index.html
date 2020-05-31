@@ -2,9 +2,9 @@
 <html>
 <head>
   <link rel="icon" href="/icons/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="font/stylesheet.css">
-  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="/fonts/stylesheet.css">
+  <link rel="stylesheet" href="/video-port-test/css/core.css">
+	<link rel="stylesheet" href="/video-port-test/css/theme.css">
   <title>SNAKE | BEANS</title>
   <style>
   html, body {
@@ -13,17 +13,91 @@
   }
 
   body {
-    background: black;
+    background: #000 !important;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   canvas {
-    border: 1px solid white;
+    border: 1px solid #b9f2ff;
+  }
+  p {
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'silkscreennormal';
+    text-transform: uppercase;
+}
+
+  h1 {
+    color: #b9f2ff;
+    font-size: 68px;
+    text-align: left;
+    line-height: 1.2em;
+    margin: 0;
+
   }
   </style>
 </head>
-<body>
+<body class="page-loaded" cz-shortcut-listen="true">
+  <div class="preloader"></div>
+
+    <ul style="padding: 2em; font-size: 3vw; list-style: none; color: #e7cfec;">
+      <li>
+        1. THE SNAKE CAN <br>
+         GO THROUGH <br>
+         THE WALL
+      </li>
+      <li>
+        2. CONTROL WITH <br> 
+        'WASD' OR <br>
+        ARROW KEYS
+      </li>
+      <li>
+        3. HAVE FUN
+      </li>
+    </ul>
+  
+  
+
+
+<header id="header" class="header-transparent">
+
+  <!-- Logo -->
+  
+    <p class="logo">
+      <a href="#">
+        <span>S</span>
+        <span>N</span>
+        <span>A</span>
+        <span>K</span>
+        <span>E</span>
+      </a>
+    </p>
+    
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="/bwmedia/index.html" class="home-link is-active">Go Back</a></li>
+      <li><a href="/main/index.html">Home</a></li>
+    </ul>
+  </nav>
+  <!-- /Navigation -->
+
+  <!-- Mobile Menu Button -->
+  <div class="mob-menu-btn"></div>
+
+  <!-- Close Aside Button -->
+  <div class="close-aside-btn"></div>
+
+</header>
+<!-- /Header -->
+
+
+
+
+
 <canvas width="400" height="400" id="game"></canvas>
 <script>
 var canvas = document.getElementById('game');
@@ -61,7 +135,7 @@ function getRandomInt(min, max) {
 function loop() {
   requestAnimationFrame(loop);
 
-  // slow game loop to 15 fps instead of 60 (60/15 = 4)
+  // slow game loop to 10 fps instead of 60 (60/6 = 10)
   if (++count < 6) {
     return;
   }
@@ -98,7 +172,7 @@ function loop() {
   }
 
   // draw apple
-  context.fillStyle = '#66018E';
+  context.fillStyle = '#e7cfec';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time
@@ -189,5 +263,6 @@ document.addEventListener('keydown', function(e) {
 // start the game
 requestAnimationFrame(loop);
 </script>
+</div>
 </body>
 </html>
