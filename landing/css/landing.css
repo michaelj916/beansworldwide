@@ -67,6 +67,46 @@ body  {
   touch-action: none;
   z-index: 1;
   background-color: black;
+  cursor: none;
+}
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 90%;
+  position: absolute;
+  animation: cursorAnim .5s infinite alternate;
+}
+
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.7);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 .5s forwards;
+  border: 1px solid #34063d;
+
 }
 
 .turnon-anim {
@@ -94,13 +134,11 @@ body  {
 	position: absolute;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
-
-
-
-
+@media only screen and (max-width: 800px) {
+  
+}
 
 @keyframes turn-on{
   0%{
