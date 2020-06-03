@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fonts/stylesheet.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/bwmedia/css/media.css">
+    <link rel="stylesheet" href="/bwmedia/css/theme.css">
+    <link rel="icon" href="/icons/favicon.ico">
+    <title>ZENDEYA COIN</title>
+
+    
+    <!-- Resources -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165561742-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-165561742-1');
+    </script>
+    <style> 
+    html, body {
+      cursor: url('/img/crsr.png') !important;
+    }
+    </style>
+</head>
+<body>
+  <div class="navbar">
+    <span>Real-Time Zendeya Coin Tracker<span>
+  </div>
+
+  <div class="mosaic"  style="max-height: 816px; max-width: 1890px; padding-bottom: 50px;">
+    <div class="mosaic-entry mosaic-entry--1024x1024">
+      <img src="/bwmedia/img/media/billfront.png" alt="BILL_FRONT">
+    </div>
+  </div>
+
+  <div class="wrapper">
+
+    <div id="chart">
+
+    </div>
+
+    <script>
+
+      function getData(min, max) {
+        min = Math.ceil(5);
+        max = Math.floor(5000);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      
+      var config = {responsive: true};
+
+      var layout = {
+        title: 'Real-Time Zendeya Coin Tracker!',
+        font: { size:18 }
+      };
+
+      
+      Plotly.plot('chart', [{
+        y:[getData()],
+        type: 'line'
+      }], config, layout );
+
+      var cnt = 0;
+
+ 
+      setInterval(function() {
+        
+        Plotly.extendTraces('chart', {y:[[getData()]]}, [0] );
+        cnt++;
+
+        if( cnt > 20 ) {
+          Plotly.relayout('chart', {
+            xaxis: {
+              range: [cnt-20,cnt]
+            }
+          });
+        }
+      }, 520);
+    </script>
+
+  </div>
+
+  <div class="mosaic" style="max-width: 1885px; max-height: 772px; padding-top: 50px;">
+    <div class="mosaic-entry mosaic-entry--1024x1024">
+      <img src="/bwmedia/img/media/billback.png" alt="BILL_BACK">
+    </div>
+  </div>
+  
+  <div class="footer">
+    <span>Go back</span>
+  </div>
+
+</body>
+</html>
