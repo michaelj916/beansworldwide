@@ -8,221 +8,123 @@
   <meta name="keywords" content="BEANS, beans, beans-magazine, beans-mag, beansworldwide, beansworldwide.com, beans magazine">
   <meta http-equiv="refresh" content="30">
   <meta name="viewport" content="width=device-width,  initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="landing/css/landing.css">
-  <link rel="stylesheet" type="text/css" href="landing/css/overlays.css">
+  <link rel="stylesheet" type="text/css" href="/fonts/stylesheet.css">
+  <script>
+    alert('Congratulations! You have found the secret game, it is PONG . . .')
+  </script>
   <style>
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
+    body { 
+      background: #000; 
+      font-family: 'silkscreennormal';
+      color: white;
+    }
+    #pong {
+        border: 2px solid #FFF;
+        position: absolute;
+        margin :auto;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+      }
 
-  body {
-    background-image: url('/img/EARTHcropped.gif');
-    background-size: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    /* Add a black background color to the top navigation */
+    .topnav {
+      background-color: #000000;
+      overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Add an active class to highlight the current page */
+    .topnav a.active {
+      background-color: #3dd900;
+      color: white;
+      font-weight: 800;
+    }
+
+    /* Hide the link that should open and close the topnav on small screens */
+    .topnav .icon {
+      display: none;
+      color: white;
+    }
+
+    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+
+    .fa-bars:before {
+        content: "\f0c9";
+    }
+
+    .fa {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale
+    }
   </style>
 </head>
 <body class="cursor">
-<canvas width="750" height="585" id="game"></canvas>
-<script>
-    alert('Congratulations, you have found the secret game!');
-    alert('Use WASD and ARROW KEYS to control..');
-const canvas = document.getElementById('game');
-const context = canvas.getContext('2d');
-const grid = 15;
-const paddleHeight = grid * 5; // 80
-const maxPaddleY = canvas.height - grid - paddleHeight;
-
-var paddleSpeed = 6;
-var ballSpeed = 2.8;
-
-const leftPaddle = {
-  // start in the middle of the game on the left side
-  x: grid * 2,
-  y: canvas.height / 2 - paddleHeight / 2,
-  width: grid,
-  height: paddleHeight,
-
-  // paddle velocity
-  dy: 0
-};
-const rightPaddle = {
-  // start in the middle of the game on the right side
-  x: canvas.width - grid * 3,
-  y: canvas.height / 2 - paddleHeight / 2,
-  width: grid,
-  height: paddleHeight,
-
-  // paddle velocity
-  dy: 0
-};
-const ball = {
-  // start in the middle of the game
-  x: canvas.width / 2,
-  y: canvas.height / 2,
-  width: grid,
-  height: grid,
-
-  // keep track of when need to reset the ball position
-  resetting: false,
-
-  // ball velocity (start going to the top-right corner)
-  dx: ballSpeed,
-  dy: -ballSpeed
-};
-
-// check for collision between two objects using axis-aligned bounding box (AABB)
-// @see https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
-function collides(obj1, obj2) {
-  return obj1.x < obj2.x + obj2.width &&
-         obj1.x + obj1.width > obj2.x &&
-         obj1.y < obj2.y + obj2.height &&
-         obj1.y + obj1.height > obj2.y;
-}
-
-// game loop
-function loop() {
-  requestAnimationFrame(loop);
-  context.clearRect(0,0,canvas.width,canvas.height);
-
-  // move paddles by their velocity
-  leftPaddle.y += leftPaddle.dy;
-  rightPaddle.y += rightPaddle.dy;
-
-  // prevent paddles from going through walls
-  if (leftPaddle.y < grid) {
-    leftPaddle.y = grid;
+  <script>
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+  function icon() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
   }
-  else if (leftPaddle.y > maxPaddleY) {
-    leftPaddle.y = maxPaddleY;
-  }
-
-  if (rightPaddle.y < grid) {
-    rightPaddle.y = grid;
-  }
-  else if (rightPaddle.y > maxPaddleY) {
-    rightPaddle.y = maxPaddleY;
-  }
-
-  // draw paddles
-  context.fillStyle = '#b9f2ff';
-  context.fillRect(leftPaddle.x, leftPaddle.y, leftPaddle.width, leftPaddle.height);
-  context.fillRect(rightPaddle.x, rightPaddle.y, rightPaddle.width, rightPaddle.height);
-
-  // move ball by its velocity
-  ball.x += ball.dx;
-  ball.y += ball.dy;
-
-  // prevent ball from going through walls by changing its velocity
-  if (ball.y < grid) {
-    ball.y = grid;
-    ball.dy *= -1;
-  }
-  else if (ball.y + grid > canvas.height - grid) {
-    ball.y = canvas.height - grid * 2;
-    ball.dy *= -1;
-  }
-
-  // reset ball if it goes past paddle (but only if we haven't already done so)
-  if ( (ball.x < 0 || ball.x > canvas.width) && !ball.resetting) {
-    ball.resetting = true;
-
-    // give some time for the player to recover before launching the ball again
-    setTimeout(() => {
-      ball.resetting = false;
-      ball.x = canvas.width / 2;
-      ball.y = canvas.height / 2;
-    }, 400);
-  }
-
-  // check to see if ball collides with paddle. if they do change x velocity
-  if (collides(ball, leftPaddle)) {
-    ball.dx *= -1;
-
-    // move ball next to the paddle otherwise the collision will happen again
-    // in the next frame
-    ball.x = leftPaddle.x + leftPaddle.width;
-  }
-  else if (collides(ball, rightPaddle)) {
-    ball.dx *= -1;
-
-    // move ball next to the paddle otherwise the collision will happen again
-    // in the next frame
-    ball.x = rightPaddle.x - ball.width;
-  }
-
-  // draw ball
-  context.fillRect(ball.x, ball.y, ball.width, ball.height);
-
-  // draw walls
-  context.fillStyle = '#f2f2f2';
-  context.fillRect(0, 0, canvas.width, grid);
-  context.fillRect(0, canvas.height - grid, canvas.width, canvas.height);
-
-  // draw dotted line down the middle
-  for (let i = grid; i < canvas.height - grid; i += grid * 2) {
-    context.fillRect(canvas.width / 2 - grid / 2, i, grid, grid);
-  }
-}
-
-// listen to keyboard events to move the paddles
-document.addEventListener('keydown', function(e) {
-
-  // up arrow key
-  if (e.which === 38) {
-    rightPaddle.dy = -paddleSpeed;
-  }
-  // down arrow key
-  else if (e.which === 40) {
-    rightPaddle.dy = paddleSpeed;
-  }
-
-  // w key
-  if (e.which === 87) {
-    leftPaddle.dy = -paddleSpeed;
-  }
-  // a key
-  else if (e.which === 83) {
-    leftPaddle.dy = paddleSpeed;
-  }
-});
-
-// listen to keyboard events to stop the paddle if key is released
-document.addEventListener('keyup', function(e) {
-  if (e.which === 38 || e.which === 40) {
-    rightPaddle.dy = 0;
-  }
-
-  if (e.which === 83 || e.which === 87) {
-    leftPaddle.dy = 0;
-  }
-});
-
-// start the game
-requestAnimationFrame(loop);
-</script>
-
-
-<script>
-    // creating a custom cursor tracker 
-
-    const cursor = document.querySelector('.cursor');
-
-    document.addEventListener('mousemove', e => {
-        cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
-    });
-
-    document.addEventListener('click', () => {
-        cursor.classList.add("expand");
-
-        setTimeout(() => {
-            cursor.classList.remove("expand");	
-        }, 500)
-    });
-
-</script>
+  </script>
+  <div class="topnav" id="myTopnav">
+    <a href="/main/index.html" class="active">Back</a>
+    <a href="https://www.beans-magazine.com/clothes">Clothing</a>
+    <a href="https://www.beans-magazine.com/new-products">Magazine</a>
+    <a href="/main/working.html">Media</a>
+    <a href="/main/working.html">Lookbook</a>
+    <a href="javascript:void(0);" class="icon" onclick="icon()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+<canvas width="600" height="400" id="pong"></canvas>
+<script src="pong.js"></script>
 </body>
 </html>
