@@ -42,14 +42,14 @@ button {
   font-family: 'silkscreennormal';
   width:100%;
   height:100%;
-  background-color: #171717;
+  background-color: #4a2000;
   color: #b9f2ff;
   font-size: 3em;
   font-weight: 900;
   cursor: pointer
 }
 button:hover span {display:none}
-button:hover:before {content:"GO BACK"; color: gold;}
+button:hover:before {content:"GO BACK"; color: gold; transition: ease-in;}
 
 .page .header__title {
   color: #b9f2ff;
@@ -115,7 +115,7 @@ button:hover:before {content:"GO BACK"; color: gold;}
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  padding: 15px;
+  padding: 3%;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
