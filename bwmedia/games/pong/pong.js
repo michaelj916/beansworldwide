@@ -17,13 +17,13 @@ userScore.src = "sounds/userScore.mp3";
 
 // Ball object
 const ball = {
-    x : canvas.width/2,
-    y : canvas.height/2,
+    x : canvas.width / 2,
+    y : canvas.height / 2,
     radius : 10,
     velocityX : 5,
     velocityY : 5,
     speed : 7,
-    color : "WHITE"
+    color : "#00cc00"
 }
 
 // User Paddle
@@ -78,6 +78,11 @@ function getMousePos(evt){
     
     user.y = evt.clientY - rect.top - user.height/2;
 }
+
+// adding touch controls 
+// getBoundingClientRect(left,top,right,bottom,x,y,width,height);
+
+
 
 // when COM or USER scores, we reset the ball
 function resetBall(){

@@ -12,11 +12,11 @@ img {
 }
 
 .navbar {
-    font-size: 9vw;
+    font-size: 10vw;
     color: #b9f2ff;
     line-height: 80%;
     text-align: center;
-    padding: 1em;
+    padding: 3%;
 
 }
 
@@ -26,10 +26,10 @@ img {
 }
 
 .footer {
-    font-size: 4vw;
+    font-size: 8vw;
     color: #b9f2ff;
     text-align: center;
-    padding: 10px;
+    padding-top: 16%;
 }
 
 .footer:hover {
