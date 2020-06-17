@@ -201,8 +201,41 @@
   
   .center {
       font-family: 'silkscreennormal';
-      font-size: 6vw;
+      font-size: 4vw;
       text-align: center;
       justify-content: center;
       padding-top: 20%;
     }
+
+  /* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) { 
+
+  
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) { 
+
+ 
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) { 
+
+  
+
+}

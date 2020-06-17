@@ -1,7 +1,7 @@
 html, body {
     
     /* linking the bckgrnd img */
-    background-image: url('/img/mag.jpeg');
+    background-image: url('/img/MAGbckgrnd.jpg');
         
         /* Background image is centered vertically and horizontally at all times */
     background-position: center center;
@@ -20,20 +20,311 @@ html, body {
     /* Set a background color that will be displayed
         while the background image is loading */
     background-color: #a1cba6;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .topnav {
-    background-color: transparent;
-    overflow: hidden;
+    position: fixed;
+    right: -37%;
+    top: 4%;
 }
 
-.topnav a {
-    float: right;
-    color: #f0f2e1;
-    text-decoration: none;
-    font-size: 6vw;
-    padding: 2.5%;
-    font-family: Arial, Helvetica, sans-serif;
+.topnav img {
+    width: 10%;
+    height: auto;
+}
+
+.main {
+    font-size: 3vw;
+    font-weight: 900;
+    color: #fbdfcfef;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-style: italic;
+}
+
+.left {
+    max-width: 16%;
+    position: fixed;
+    height: 100%;
+    top: 15%;
+    left: 2%;
+}
+
+.left img {
+    width: 20%;
+    height: auto;
+    padding-top: 10%;
+}
+
+.bottom-left {
+    bottom: 0;
+    position: fixed;
+    left: 2%;
+}
+
+.bottom-left p {
+    color: #fbdfcfef;
+    font-style: italic;
     font-weight: 700;
-    opacity: 60%;
+    font-size: 14px;
+    
+}
+
+.title {
+    position: fixed;
+    top: 3%;
+    left: 3%;
+}
+
+.title img {
+    width:70%;
+    height: auto;
+}
+
+.sig {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.sig img {
+    width: 35%; 
+    height: auto;
+}
+
+
+
+@media (max-width: 1000px) {
+    .main {
+        font-size: 2vw;
+    }
+
+    .left {
+        top: 12%;
+        left: 3%;
+    }
+
+    .left img {
+        width: 100%;
+        height: auto;
+        padding-top: 50%;
+    }
+
+    .main {
+        font-size: 23px;
+        text-align: center;
+        justify-content: center center;
+    }
+
+    .left {
+        top: 90px;
+    }
+
+    .left img {
+        padding-top: 20%;
+    }
+
+    .title {
+        top: 2%;
+        left: 2%;
+    }
+
+    .title img {
+        width: 50%;
+        height: auto;
+    }
+
+    .topnav {
+        top: 20px;
+        padding-left: 312px;
+    }
+
+    .topnav img {
+        width: 20%;
+        height: auto;
+    }
+
+    .bottom-left p {
+        font-size: 15px;
+    }
+
+    .sig {
+        padding-left: 260px;
+    }
+
+    .sig img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) { 
+
+    .main {
+        font-size: 25px;
+        text-align: center;
+        justify-content: center center;
+    }
+    
+    .left img {
+        padding-top: 20%;
+    }
+
+    .title {
+        top: 2%;
+        left: 2%;
+    }
+
+    .title img {
+        width: 50%;
+        height: auto;
+    }
+
+    .topnav {
+        top: 20px;
+        padding-left: 312px;
+    }
+
+    .topnav img {
+        width: 20%;
+        height: auto;
+    }
+
+    .bottom-left p {
+        font-size: 15px;
+    }
+
+    .sig {
+        padding-left: 260px;
+    }
+
+    .sig img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) { 
+
+    .main {
+        font-size: 23px;
+        text-align: center;
+        justify-content: center center;
+    }
+
+    .left img {
+        width: 90%;
+        height: auto;
+        padding-top: 10%;
+    }
+
+    .title {
+        top: 2%;
+        left: 2%;
+    }
+
+    .title img {
+        width: 50%;
+        height: auto;
+    }
+
+    .topnav {
+        top: 20px;
+        padding-left: 312px;
+    }
+
+    .topnav img {
+        width: 20%;
+        height: auto;
+    }
+
+    .bottom-left p {
+        font-size: 15px;
+    }
+
+    .sig {
+        padding-left: 260px;
+    }
+
+    .sig img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    .main {
+        font-size: 21px;
+        text-align: center;
+        justify-content: center center;
+    }
+ 
+    .left {
+        top: 72px;
+        left: 15px;
+    }
+
+    .left img {
+        width: 100%;
+        height: auto;
+        padding-top: 10%;
+    }
+
+    .title {
+        top: 2%;
+        left: 2%;
+    }
+
+    .title img {
+        width: 50%;
+        height: auto;
+    }
+
+    .topnav {
+        top: 20px;
+        padding-left: 312px;
+    }
+
+    .topnav img {
+        width: 20%;
+        height: auto;
+    }
+
+    .bottom-left p {
+        font-size: 15px;
+    }
+
+    .sig {
+        padding-left: 260px;
+    }
+
+    .sig img {
+        width: 100%;
+        height: auto;
+    }
+
 }
