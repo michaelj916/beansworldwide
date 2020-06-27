@@ -56,42 +56,154 @@
       </a>
     </div>
 
-    <div class="grid">
-        <!--
-        "flexGrow":      photo.width * 100 / photo.height,
-        "flexBasis":     photo.width * 240 / photo.height,
-        "paddingBottom": photo.height / photo.width * 100,
-        -->
-        <img src="http://placeimg.com/400/600/animals">
-        <img src="http://placeimg.com/600/400/animals">
-        <img src="http://placeimg.com/700/300/animals">
-        <img src="http://placeimg.com/640/640/animals">
-        <img src="http://placeimg.com/420/640/animals">
-        <img src="http://placeimg.com/480/380/animals">
-        <a href="stock/index.html">
-          <img src="img/media/billfront.png" style="object-fit: contain; display: block; margin-left: auto; margin-right: auto; width: 80%;">
-          <img src="img/media/billback.png" style="object-fit: contain; display: block; margin-left: auto; margin-right: auto; width: 80%;">
-        </a>
-        <img src="http://placeimg.com/400/600/animals">
-        <img src="http://placeimg.com/600/400/animals">
-        <img src="http://placeimg.com/700/300/animals">
-        <img src="http://placeimg.com/640/640/animals">
-        <img src="http://placeimg.com/420/640/animals">
-        <img src="http://placeimg.com/480/380/animals">
-        <img src="http://placeimg.com/560/365/animals">
-    </div>
+    <div class="container">
+     
 
-    <!-- masonry.js -->
+      <div class="grid">
+
+          <div class="grid-col grid-col--1">
+              
+              <div class="grid-item">
+                  <img src="img/media/IMG_6414.JPG">
+              </div>
       
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+              <div class="grid-item">
+                  <img src="img/media/MOSHED-2020-6-17-21-51-38.gif">
+              </div>
 
-    <!-- infinite scroll -->
+              <div class="grid-item">
+                  <img src="img/media/ezgif.com-gif-maker copy.gif">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_1896.JPG">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_2325.JPG">
+              </div>
 
-    <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+              <div class="grid-item">
+                <img src="img/media/IMG_6414.JPG">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/MOSHED-2020-6-17-21-51-38.gif">
+              </div>
 
-    <!-- custom masonry grid script -->
+              <div class="grid-item">
+                  <img src="img/media/ezgif.com-gif-maker copy.gif">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_1896.JPG">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_2325.JPG">
+              </div>
 
-    <script src="assets/flex.js"></script>
+          </div>
+
+          <div class="grid-col grid-col--2">
+              
+              <div class="grid-item">
+                  <img src="img/media/IMG_0924.JPG">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_0975.PNG">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_1511.JPG">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_3576.PNG">
+              </div>
+
+              <div class="grid-item">
+                  <img src="img/media/ezgif.com-gif-maker.gif">
+              </div>
+
+              <div class="grid-item">
+                <img src="img/media/IMG_0924.JPG">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_0975.PNG">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_1511.JPG">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_3576.PNG">
+              </div>
+
+              <div class="grid-item">
+                  <img src="img/media/ezgif.com-gif-maker.gif">
+              </div>
+
+          </div>
+
+          <div class="grid-col grid-col--3">
+              
+              <div class="grid-item">
+                  <img src="img/media/IMG_0158.PNG">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_0161.JPG">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_0593.JPG">
+              </div>
+      
+              <div class="grid-item">
+                  <img src="img/media/IMG_0662.jpg">
+              </div>
+
+              <div class="grid-item">
+                  <img src="img/media/IMG_0296.jpg">
+              </div>
+
+              <div class="grid-item">
+                <img src="img/media/IMG_0158.PNG">
+            </div>
+  
+            <div class="grid-item">
+                <img src="img/media/IMG_0161.JPG">
+            </div>
+    
+            <div class="grid-item">
+                <img src="img/media/IMG_0593.JPG">
+            </div>
+    
+            <div class="grid-item">
+                <img src="img/media/IMG_0662.jpg">
+            </div>
+
+            <div class="grid-item">
+                <img src="img/media/IMG_0296.jpg">
+            </div>
+
+          </div>
+        </div>
+  </div>
+
+  <script src="https://unpkg.com/colcade@0/colcade.js"></script>
+  <script>
+      // element as first argument
+      var grid = document.querySelector('.grid');
+      var colc = new Colcade( grid, {
+      columns: '.grid-col',
+      items: '.grid-item'
+      });
+  </script>
          
 </body>
 </html>
