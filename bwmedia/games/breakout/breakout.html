@@ -6,7 +6,6 @@
         <meta charset="utf-8">
         <meta name="description" content="BEANS">
         <meta name="keywords" content="BEANS, beans, beans-magazine, beans-mag, beansworldwide, beansworldwide.com, beans magazine">
-        <meta http-equiv="refresh" content="30">
         <link rel="stylesheet" href="/fonts/stylesheet.css">
         <link rel="stylesheet" href="breakout.css">
         <meta name="viewport" content="width=device-width,  initial-scale=1">
@@ -27,26 +26,25 @@
         </script>
 
         <div class="topnav" id="myTopnav">
-            <a href="/main/index.html" class="active">Back</a>
-            <a href="https://www.beans-magazine.com/clothes">Clothing</a>
-            <a href="https://www.beans-magazine.com/new-products">Magazine</a>
-            <a href="/main/working.html">Media</a>
-            <a href="/main/working.html">Lookbook</a>
-            <a href="javascript:void(0);" class="icon" onclick="icon()">
-                <i class="fa fa-bars"></i>
-            </a>
+            <a href="/main/index.html" class="active">Home</a>
+            <a href="/bwmedia/games/pong/pong.html">Pong</a>
+            <a href="/bwmedia/games/pacman/index.html">pacman</a>
+            <a href="/bwmedia/games/snake/index.html">snake</a>
+            <a href="/bwmedia/games/breakout/breakout.html">breakout</a>
+            <a href="javascript:void(0);" class="icon" onclick="icon()">|||</a>
         </div>
 
         <!-- Game -->
 
-        <div style="text-align: center; padding-top: 10%;">
+        <div class="BRKOUT">
           <canvas width="400" height="500" id="game"></canvas>
         </div>
         <script src="breakout.js"></script>
 
         <!-- Glitch Text -->
-
-        <div class="text middle" data-text="Press Space to Start"></div>
+        <div class="outer">
+            <div class="instr">Press Space to Start</div>
+        </div>
 
     </body>
 </html>

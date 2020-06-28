@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>PONG</title>
-  <link rel="icon" href="/icons/favicon.ico">
-  <meta charset="utf-8">
-  <meta name="description" content="BEANS">
-  <meta name="keywords" content="BEANS, beans, beans-magazine, beans-mag, beansworldwide, beansworldwide.com, beans magazine">
-  <meta name="viewport" content="width=device-width,  initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/fonts/stylesheet.css">
-  <style>
-    body { 
-      background: #000000; 
-      font-family: 'silkscreennormal';
-      color: white;
-    }
-    #pong {
-        border: 2px solid #FFF;
-        position: absolute;
-        margin :auto;
-        top:0;
-        right:0;
-        left:0;
-        bottom:0;
+  <head>
+    <meta charset="utf-8" />
+    <title>BEANS PACMAN</title>
+    <link rel="stylesheet" href="/fonts/stylesheet.css">
+    <link rel="icon" href="/icons/favicon.ico">
+    <style type="text/css">
+      body {
+        background-color: #000;
+        font-family: 'silkscreennormal';
       }
+      p {
+        display: block;
+        margin: 0;
+      }
+      #pacman {
+        height:450px;
+        width:342px;
+        margin:20px auto;
+      }
+      #shim { 
+        font-family: 'silkscreennormal'; 
+        position:absolute;
+        visibility:hidden
+      }
+      .wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .info {
+        position: fixed;
+        color: #fff;
+        font-family: 'silkscreennormal';
+        bottom: 2%;
+        left: 2%;
+        font-size: 2vw;
+        opacity: 60%;
+      }
+      h1 { font-family: 'silkscreennormal'; text-align:center; color: #fff; }
+      body { width:342px; margin:0px auto; font-family:sans-serif; }
+      a { text-decoration:none; }
 
+            /* Add a black background color to the top navigation */
       .topnav {
           background-color: #000000;
           overflow: hidden;
@@ -88,29 +109,61 @@
             display: block;
           }
         }
-  </style>
+
+    </style>
+
 </head>
-<body class="cursor">
+
+<body>
+
   <script>
-  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-  function icon() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
+    // Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon 
+    function icon() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
     }
-  }
   </script>
+
   <div class="topnav" id="myTopnav">
     <a href="/main/index.html" class="active">Home</a>
     <a href="/bwmedia/games/breakout/breakout.html">Breakout</a>
-    <a href="/bwmedia/games/pacman/index.html">pacman</a>
     <a href="/bwmedia/games/snake/index.html">snake</a>
+    <a href="/bwmedia/games/pong/pong.html">pong</a>
     <a href="/bwmedia/games/centipede/index.html">centipede</a>
     <a href="javascript:void(0);" class="icon" onclick="icon()">|||</a>
   </div>
-<canvas width="600" height="400" id="pong"></canvas>
-<script src="pong.js"></script>
+
+  <div class="wrapper">
+
+    <h1>BEANS Pacman</h1>
+
+    <div id="pacman"></div>
+
+  </div>
+  
+  <div class="info">
+    <p>press s to turn sound off and on</p>
+  </div>
+
+  <script src="pacman.js"></script>
+  <script src="modernizr-1.5.min.js"></script>
+
+  <script>
+
+    var el = document.getElementById("pacman");
+
+    if (Modernizr.canvas && Modernizr.localstorage && 
+        Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
+      window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
+    } else { 
+      el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
+        "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+    }
+  </script>
+
 </body>
 </html>
