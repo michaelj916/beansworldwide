@@ -1,62 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>LOOKBOOK | BEANS</title>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="/fonts/stylesheet.css" >
-    <link rel="icon" href="/icons/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOKBOOK</title>
+    <link rel="stylesheet" href="/icons/favicon.ico">
+    <link rel="stylesheet" href="/fonts/stylesheet.css">
+    <link rel="stylesheet" href="fullpage.css">
 </head>
 <body>
-    <div class="page">
-        <header class="header">
-            <a href="/main/index.html">
-                <button>
-                    <span>LOOKBOOK</span>
-                </button>
-            </a>
-        </header>
+    <style>
+        html, body {
+            font-family: 'silkscreennormal';
+        }
+        .section h1 {
+            font-size: 7vw;
+        }
 
+        .is1 {
+            color: #b9f2ff;
+        }
 
+        .is2 {
+            color: #000;
+        }
 
-        <main class="main">
-            <div class="slider">
-                <!-- <div class="slider__slide active">
-                    <div class="slider__content">
-                        <h3>
-                            Project 1<br>
-                            <span>Website</span>
-                        </h3>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab sit recusandae earum voluptatum dolor pariatur fuga ut adipisci similique saepe. Labore doloremque eos sed delectus?
-                        </p>
-                        <button class="btn">Case Study</button>
-                    </div>
-                </div> -->
-                <!-- <div class="slider__slide">
-                    <div class="slider__content">
-                        <h3>
-                            Project 2<br>
-                            <span>Website</span>
-                        </h3>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab sit recusandae earum voluptatum dolor pariatur fuga ut adipisci similique saepe. Labore doloremque eos sed delectus?
-                        </p>
-                        <button class="btn">Case Study</button>
-                    </div>
-                </div> 
-            
-                    created through main.js  -->
-                <div class="slider__btns">
-                    <div class="slider__btn" id="prev">&lt;</div>
-                    <div class="slider__btn" id="next">&gt;</div>
+        .is3 {
+            color: #fff;
+        }
+
+        .is1, .is2, .is3 {
+            text-align: center;
+        }
+        .slide img {
+            align-items: center;
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .btmlft {
+            color: #000;
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+            opacity: 50%;
+            font-size: 2vw;
+        }
+        .btmrt {
+            color: #000;
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            opacity: 50%;
+            font-size: 2vw;
+        }
+        #navbar {
+            width: 100%;
+            height: 4%;
+            top: 0 px;
+            position: absolute;
+            z-index: 999;
+            background-color: #313030;
+            opacity: 40%;
+
+        }
+        #navbar a {
+            text-decoration: none;
+            color: white;
+            float: left;
+            padding-top: .4%;
+            padding-left: 1%;
+            font-size: 40px;
+            padding-right: 4%;
+        }
+
+    </style>
+    <div id="navbar">
+        <a href="/main/index.html">Home</a>
+        <a href="https://beans-magazine.com/clothes">clothes</a>
+        <a href="/magazine/index.html">magazine</a>
+        <a href="/bwmedia/index.html">media</a>
+        <a href="/bwmedia/games/pacman/index.html">arcade</a>
+    </div>
+    <div id="fullpage">
+        <div class="section is1">
+            <div class="slide" data-anchor="slide1">
+                <h1>ISSUE #1</h1>
+
+                <div class="btmlft">
+                    scroll down
                 </div>
             </div>
-        </main>
+            <div class="slide" data-anchor="slide2">
+                <img src="img/another ic3 page.jpg" alt="ic3">
+            </div>
+            <div class="slide" data-anchor="slide3">
+                <img src="img/cloth.jpg" alt="cloth">
+            </div>
+        </div>
+        <div class="section is2">
+
+            <div class="slide" data-anchor="slide1">
+                <h1>ISSUE #2</h1>
+
+                <div class="btmlft">
+                    scroll down
+                </div>
+            </div>
+            <div class="slide" data-anchor="slide2">
+                <img src="img/another ic3 page.jpg" alt="ic3">
+            </div>
+            <div class="slide" data-anchor="slide3">
+                <img src="img/cloth.jpg" alt="cloth">
+            </div>   
+            
+            <div class="slide" data-anchor="slide4">
+                <img src="img/fit rate.jpg" alt="ic3">
+            </div>
+            <div class="slide" data-anchor="slide5">
+                <img src="img/NLE.jpg" alt="cloth">
+            </div>   
+            
+            <div class="slide" data-anchor="slide6">
+                <img src="img/rich.jpg" alt="ic3">
+            </div>
+            <div class="slide" data-anchor="slide7">
+                <img src="img/shakes.jpg" alt="cloth">
+            </div>   
+            
+            <div class="slide" data-anchor="slide8">
+                <img src="img/shisr.jpg" alt="ic3">
+            </div>
+            <div class="slide" data-anchor="slide9">
+                <img src="img/skiamda.jpg" alt="cloth">
+            </div>    
+            
+            <div class="slide" data-anchor="slide10">
+                <img src="img/story time.jpg" alt="ic3">
+            </div>
+            <div class="slide" data-anchor="slide11">
+                <img src="img/trump ralley.jpg" alt="cloth">
+            </div>   
+            
+            <div class="slide" data-anchor="slide12">
+                <img src="img/ukkug.jpg" alt="ic3">
+            </div>
+            <div class="slide" data-anchor="slide13">
+                <img src="img/Untitld-3.jpg" alt="">
+            </div>
+        </div>
+        <div class="section is3">
+          
+            <div class="slide" data-anchor="slide1">
+                <h1>ISSUE #3</h1>
+
+                <div class="btmlft">
+                    scroll up
+                </div>
+            </div>
+            <div class="slide" data-anchor="slide2">
+                <img src="img/another ic3 page.jpg" alt="ic3">
+            </div>
+            <div class="slide" data-anchor="slide3">
+                <img src="img/cloth.jpg" alt="cloth">
+            </div>
+
+        </div>
     </div>
 
-    <script src="main.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.0.8/dist/fullpage.min.js"></script>
+    <script>
+        var myFullpage = new fullpage('#fullpage', {
+            //Navigation
+            menu: '#menu',
+            lockAnchors: false,
+            anchors:['firstPage', 'secondPage', 'thirdPage'],
+            navigation: false,
+            navigationPosition: 'right',
+            navigationTooltips: ['firstSlide', 'secondSlide'],
+            showActiveTooltip: false,
+            slidesNavigation: false,
+            slidesNavPosition: 'bottom',
+
+            //Scrolling
+            css3: true,
+            scrollingSpeed: 700,
+            autoScrolling: true,
+            fitToSection: true,
+            fitToSectionDelay: 1000,
+            scrollBar: false,
+            easing: 'easeInOutCubic',
+            easingcss3: 'ease',
+            loopBottom: false,
+            loopTop: false,
+            loopHorizontal: true,
+            continuousVertical: false,
+            continuousHorizontal: false,
+            scrollHorizontally: false,
+            interlockedSlides: false,
+            dragAndMove: false,
+            offsetSections: false,
+            resetSliders: false,
+            fadingEffect: false,
+            normalScrollElements: '#element1, .element2',
+            scrollOverflow: false,
+            scrollOverflowReset: false,
+            scrollOverflowOptions: null,
+            touchSensitivity: 15,
+            bigSectionsDestination: null,
+
+            //Accessibility
+            keyboardScrolling: true,
+            animateAnchor: true,
+            recordHistory: true,
+
+            //Design
+            controlArrows: true,
+            verticalCentered: true,
+            sectionsColor : ['#4a2000', '#f7cdcf', '#FFEB78'],
+            paddingTop: '3em',
+            paddingBottom: '10px',
+            fixedElements: '#header, .footer',
+            responsiveWidth: 0,
+            responsiveHeight: 0,
+            responsiveSlides: false,
+            parallax: false,
+            parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+            cards: false,
+            cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
+
+            //Custom selectors
+            sectionSelector: '.section',
+            slideSelector: '.slide',
+
+            lazyLoading: true,
+
+            //events
+            onLeave: function(origin, destination, direction){},
+            afterLoad: function(origin, destination, direction){},
+            afterRender: function(){},
+            afterResize: function(width, height){},
+            afterReBuild: function(){},
+            afterResponsive: function(isResponsive){},
+            afterSlideLoad: function(section, origin, destination, direction){},
+            onSlideLeave: function(section, origin, destination, direction){},
+
+            // key
+            licenseKey: '6E5D8669-5E134866-A4AD5BC0-3BB78EDB'
+        });
+    </script>
 </body>
 </html>
