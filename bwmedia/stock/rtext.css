@@ -12,9 +12,11 @@ body {
     margin: 0;
   }
   
+  .title p>span {
+    position: absolute;
+  }
   .word {
     position: absolute;
-    width: 100%;
     opacity: 0;
   }
   
@@ -42,10 +44,12 @@ body {
   
   .wisteria {
     color: #eecdfc;
+    left: 40%;
   }
   
   .belize {
     color: #acdcfc;
+    left: 32%;
   }
   
   .pomegranate {
