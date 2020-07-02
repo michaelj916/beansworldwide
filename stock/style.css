@@ -1,0 +1,62 @@
+body {
+    font-family: 'silkscreennormal';
+    background: #fefefe !important;
+}
+
+div {
+    text-align: center;
+}
+
+img {
+    max-width: 2600px;
+}
+
+.navbar {
+    font-size: 10vw;
+    color: #b9f2ff;
+    line-height: 80%;
+    text-align: center;
+    padding: 3%;
+
+}
+
+.wrapper {
+    width: 100% auto;
+    height: auto;
+}
+
+.navbar:hover {
+    color: gold;
+    cursor: pointer;
+}
+
+.footer {
+    font-size: 8vw;
+    color: #b9f2ff;
+    text-align: center;
+    padding-top: 1%;
+}
+
+.footer:hover {
+    color: gold;
+    cursor: pointer;
+}
+
+/* width */
+body::-webkit-scrollbar, body::-webkit-scrollbar-corner {
+    width: 10px;
+  }
+  
+  /* Track */
+  body::-webkit-scrollbar-track {
+    background-color: thistle;
+  }
+  
+  /* Handle */
+  body::-webkit-scrollbar-thumb {
+    background: #b9f2ff;
+  }
+
+  .title {
+      font-size: 4vw;
+  }
