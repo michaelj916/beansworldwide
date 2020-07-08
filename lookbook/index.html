@@ -10,6 +10,7 @@
 </head>
 <body>
     <style>
+
         html, body {
             font-family: 'silkscreennormal';
         }
@@ -17,19 +18,23 @@
             font-size: 7vw;
         }
 
-        .is1 {
-            color: #b9f2ff;
-        }
-
         .is2 {
-            color: #000;
+            color: #ffffff;
         }
 
         .is3 {
+            color: #000;
+        }
+
+        .is4 {
             color: #fff;
         }
 
-        .is1, .is2, .is3 {
+        .is5 {
+            color: #fff;
+        }
+
+        .is2, .is3, .is4, .is5, .is6 {
             text-align: center;
         }
         .slide img {
@@ -39,12 +44,12 @@
             margin: 0 auto;
         }
         .btmlft {
-            color: #000;
+            color: #ffffff;
             position: fixed;
             bottom: 15px;
             left: 15px;
             opacity: 50%;
-            font-size: 2vw;
+            font-size: 1rem;
         }
         .btmrt {
             color: #000;
@@ -54,36 +59,150 @@
             opacity: 50%;
             font-size: 2vw;
         }
-        #navbar {
+
+        @media only screen and (max-width: 414px) {
+            .navbar a {
+                font-size: 2rem;
+            }
+        }
+
+        .navbar {
             width: 100%;
             height: 4%;
-            top: 0 px;
+            top: 2%;
             position: absolute;
             z-index: 999;
-            background-color: #313030;
-            opacity: 40%;
+            opacity: 90%;
 
         }
-        #navbar a {
+        .navbar a {
             text-decoration: none;
             color: white;
             float: left;
-            padding-top: .4%;
             padding-left: 1%;
-            font-size: 40px;
-            padding-right: 4%;
+            font-size: 2vw;
+            padding-right: 2%;
+        }    
+
+        .navbar a:hover {
+            color: #93ebffdc;
+        }
+
+        .navbar6 {
+            width: 100%;
+            height: auto;
+            top: 2%;
+            position: absolute;
+            z-index: 999;
+            opacity: 90%;
+
+        }
+        .navbar6 a {
+            text-decoration: none;
+            color: white;
+            float: left;
+            padding-left: 1%;
+            font-size: 2vw;
+            padding-right: 1%;
+        }    
+
+        .navbar6 a:hover {
+            color: #93ebffdc;
+        }
+
+        .is1 h1 {
+            position: absolute;
+            top: 1%;
+            left: 2%;
+            font-size: 3vw;
+            color: #b9f2ff;
+        }
+
+        .is1 a {
+            text-decoration: none;
+            color: #b9f2ff;
+        }
+
+        .is1 h2 {
+            position: absolute;
+            right: 2%;
+            top: 1%;
+            font-size: 3vw;
+        }
+
+
+        .coolBeans {
+            font-size: 4rem;
+            font-weight: 100;
+            overflow: hidden;
+            padding: 1rem 2rem;
+            position: relative;
+            text-decoration: none;
+            transition: 0.2s transform ease-in-out;
+            will-change: transform;
+            z-index: 0;
+        }
+        .coolBeans::after {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            will-change: transform;
+            z-index: -1;
+        }
+        .coolBeans:hover::after {
+            transform: translate(0, 0);
+        }
+        .coolBeans:hover {
+            color: gold;
+            transform: scale(1.05);
+            will-change: transform;
+        }
+
+        .btnwrap {
+            text-align: center;
+            display: inline-block
+        }
+
+        .btnwrap a {
+            padding-top: 5%;
         }
 
     </style>
-    <div id="navbar">
-        <a href="/main/index.html">Home</a>
-        <a href="https://beans-magazine.com/clothes">clothes</a>
-        <a href="/magazine/index.html">magazine</a>
-        <a href="/bwmedia/index.html">media</a>
-        <a href="/bwmedia/games/pacman/index.html">arcade</a>
-    </div>
+
     <div id="fullpage">
         <div class="section is1">
+            <h1>lookbook</h1>
+            <h2 class="home"><a href="/main/index.html">home</a></h2>
+
+            <div class="btnwrap">
+                <a href="#secondPage" class="coolBeans">issue 1</a>
+                <a href="#thirdPage" class="coolBeans">issue 2</a>
+                <a href="#fourthPage" class="coolBeans">winter 2019</a>
+                <a href="#fifthPage" class="coolBeans">summer 2020</a>
+                <a href="#sixthPage" class="coolBeans">issue 3</a>
+            </div>
+           
+        </div>  
+
+        <!-- issue 1 -->
+        <div class="section is2">
+                  
+                <!-- navbar -->
+            <div class="navbar">
+                <a href="#firstPage">back</a>
+                <a href="#secondPage" >issue 1</a>
+                <a href="#thirdPage" >issue 2</a>
+                <a href="#fourthPage" >winter 2019</a>
+                <a href="#fifthPage" >summer 2020</a>
+                <a href="#sixthPage" >issue 3</a>
+            </div>
+
+
+                <!-- slide 1 -->
             <div class="slide" data-anchor="slide1">
                 <h1>ISSUE #1</h1>
 
@@ -98,7 +217,21 @@
                 <img src="https://lh3.googleusercontent.com/0-3227gyrbmE6NIUjLQAvKaY-suZ0kCwsK9YyhgpNNcbltkQ8H4ytJlLp2YSOC0OmM1YfKBcVQWJNtBijo9_2t8R8UJoOglIRMCRngwRifp12IWhTcWdk6NRPOCaaWDGf0mDOMieMnlBvV_u9Rnokqw433BY_nHiGwngswcjZdLbt5lt_rdAaRh0oEyiHzitc9NYZ7QTz94vO8sfrknk06LbL14ygfYgsJ8GSH8K8uiRbVHgRowgi2zkZqD3Hekl_M_8Y8ACVQbrIjtNWWNoAH4Kr_Ae9_WxCwGkZcPbfDKD79Vwr1IMpscJvUPseCZ575B9dQXzoufz4r9L5BH9j5zYU9vefRWDj1G5i9hrOa1zLwP_6vX4R2B_SQ3qMnrRY6E5PxcOT9Z95jGkxnSiv5ULZmEft-r8rmWTEql9H-W1liaHZDnJHQMcS5bhjn8whaqJpzmxl1jiXGWlectmXOiaIa2RVwCQSCR_-XuqQqA0eRKFHPmSQlPhRsY56rRSeevMnxjCdWRvTAxMDZAaCuGtf874Tc8-bHBYKFmFFI4jpytsWy4-dbPtW_3wqRrgd28Cm122uVd_AYPpCNF_cbMF2hOe_DmvTbcNHSBLdJmFtvCUN45w4XYCQRxwXTxDEpFHBEcJC6xScfrTKQl9bexV2H179ASQnIidE_Kh-IcoFn4_vPrBDn4CF02MZQ=w1278-h865-no?authuser=0" alt="10">
             </div>
         </div>
-        <div class="section is2">
+
+        
+        <!-- issue 2 -->
+        <div class="section is3">
+
+                <!-- navbar -->
+                <div class="navbar">
+                    <a href="#firstPage">back</a>
+                    <a href="#secondPage" >issue 1</a>
+                    <a href="#thirdPage" >issue 2</a>
+                    <a href="#fourthPage" >winter 2019</a>
+                    <a href="#fifthPage" >summer 2020</a>
+                    <a href="#sixthPage" >issue 3</a>
+                </div>
+
 
             <div class="slide" data-anchor="slide1">
                 <h1>ISSUE #2</h1>
@@ -108,50 +241,194 @@
                 </div>
             </div>
             <div class="slide" data-anchor="slide2">
-                <img src="https://lh3.googleusercontent.com/uJAu4UFMjlBG34MGEuMDj_8SNONB3YAw124Vqyp7ATYkOlwR9rUpQxMPRGsUWzbPzTwHSj1dm9mye2ZChFSt4k7-J-8OvL6k9TPxH_OJb9p8ygDii6yUMcF9nyvcU3HaPzX8R1yC6ZufWBVJPJ-vKxjWR_Cp7F2vuUjzbQn0313WCH9ONPt4mow62o2NJ2hXbP1H8GyihnXIdB13kphQqCBM_O2LFY5WhUvBtJlLu9JH3g7xzZ5GNbQ62TAKKvpJos3uIOfHg4ohIUb0ryELIpusk4y29bvCd-nL8TPbtWI21inBP4gmTXGfNtgQ5uRWoeJUes8xC0TDqSJux6WzkKALO6jT0O0jg5wq12F01AMVYyU4IoRG0iZFcgtbd1Sk4uC4jgsafIyXKaf3-WUvUWG-gVkYn1xOKDaIKmtPoZCFMKqle475u6N5ibIuQUwIXQaXDhEFpGlBqoIsIECxuAMcyZE_8ce6ZqxSeuYtVGu0o-g_r1qTP4nbpRH4Wvpgra8aofqY0nf27GHz80UxQGRjAybPvl298lzkLZ07mx-aOKPS1gwpjo2TtxLh8_18tn3BUe6EuuzzCnesyVlps0R6P3nq5WyooVQu6wwcrwNQyScCJ0CFI7gYDAaMQNhg7Hvoa90vi2QUmIfOB1FnJp5xCwPvuau2NtbSIdb0mDf8NceSt_wKbfTtsqSOKA=w1278-h865-no?authuser=0" alt="1">
+                <img src="img\story time-min.jpg" >
             </div>
             <div class="slide" data-anchor="slide3">
-                <img src="https://lh3.googleusercontent.com/WvskgIaQ3A8ph86ikTyLzC9TK8MW_9608DBPoD3aBixRe9wzcliDzozwsqrXophlRpTaanUbYvXCNoKQPl8ylewvzRRJRxD2U34JwamkkP930eW7UfQOini5GLzhkKwgwlmQWAxLfSwCzLTojq6hbocySYw7NrweMf6CtjLlAJYzAgtDmAf_NfX1WQvUjBxYbDwYL71lRbvmEfnFJzUxFgNqd3TXZBmUEG_qWPLM6tU9ov81_MOB5pW7FHF-LOGJx9eZZMU781pKprClkItAMswrFWRiA3BBrnaHt6bElEx4J5jWD7cf-6eUVo29LYgkpuVSKRVG9ZIQ4ZI1eeDmep-IhhqC3yUkjudFFf0w0c-74l4Tnn6_HNSvcer6bsBQ38ZKYdVIgqB3s1ig3dfiqwpI_WYlYH0_ZyzfdorubuABEwSED9N4UbVF7xiID9nBYY5wfz1bVHMDFX5rUeu7l4E6M2JYoE4tmBtuEzO-LBjKC_DY3bWanqjxZRXm_W5OjUnRTseazj9RhBSuQnxIjRfkX_RkHVrZcCF1mv7WzlVfbtrlIExZJjepC64fF1ftvSKlX3Pu7-2H4qYO6QRjdpUDLVS1SVtP32Q3C7P7JEgxbzhKv9WQ40bnkhpZz0W7IMU7UImbdIVhTN4dKFysRJJEU58dYVd9rdij8oLkNc1GoqbVKnDbReS-KeNbCQ=w1278-h865-no?authuser=0" alt="2">
+                <img src="img\trump ralley-min.jpg" >
             </div>   
             
             <div class="slide" data-anchor="slide4">
-                <img src="https://lh3.googleusercontent.com/HO5eWGs49SDJ85UDBt0Ub9_TlsWeeuNrn52gGtEqA30HHFQIrY72tpdFZGdgJQsdjtH3tLN5tz2v-naBmEAO0ji9jefoZTA01X725oonusde-gqj2inSjNI7iWdLrYx3s3SaPxOS07MudR66kK1OLJY-xsXUmfZIB19_LgMOo9GeEyXLEqex7imJtUXQ8AgZ3nGJphxY13DakpObkTVQxmNH_D11RqJ2eL6ckUXwfs653m6hkxbp7zsR8pSRNj1S6KTngylCNDCDENqcJZE1N2tbFHY_4nhEqB-fuM4svzGTtYKTBdFQiWlEqNZdUAOMP7LczDVHhTEeNaCbWDV0rIkewi2DfGJCZCcfyOU4ksl1Q1fGEhEgN1G1yzI7ncM6OBTLCDZhmS0TBJM6FEu1Oo9RbAT6ugkBtJFzDWRbAqwD_nb5PXRGQRERphYThVH8plUO9vbvXN9FoctjyoIf2QejQGQpzZ7ucNJVkEAlo5rl7g9f32TzVpq7MKRiKTiU3HsDv4LOdwqWngLgI2Xt757M2PSAB2Y3k0qkawtwjSuAyLJyMkOURGgtbdEdkI1hMZJkwRzPqpqKxwRc1MtGCiRvW5AXu7-L66Co3X_xo6AnDAPE8cNjNTpvJQuYc-u3k34xPSv0LJXOSxQi1bbL_cPhmv0c-oJTMOigZR3kLo8pgSqS-4u3wl5aG9HHKQ=w1278-h865-no?authuser=0" alt="3">
+                <img src="img\ukkug-min.jpg" >
             </div>
             <div class="slide" data-anchor="slide5">
-                <img src="https://lh3.googleusercontent.com/mFvOpOzHaKHhj2gasOnTpp4Zhc_LBIgDX8fmYbs_MO0plBUrKOre4sGT_qauZMaNiHJ9h0gQlK91H1PsHaGbkpdSPdJPJydDU99w1z8EisQ-OY6hqgjHfnDJjmHqwlEokC1OlGun90RlM_vDytY4kLjDtdKSHAao7vfTigwhZuS5eLkdQiUvnFdbtnqtGPaw8jG_gzRsh3-UjMk5tugWaOjv3LuKcWgO0kUJuYIbbeO-YQ4NdJvtpDHTaZRt6j4wqS8hzt-IeebKI3_XMcsTj90gUzs0ZcUbsCHPpttMskhPDYMPaCm8jrwj1R8HpoJBtP8z-7I-XsxSlK024UUO3yivZ4fBOF_iTXuitKZNmESLdrI3YqIHuQ4evy5xIE9fRJjKW42G1Nq8a9yIkT08bscga6CuVqLM4Rcqo4h3K1rHSAxMQCn65xicJPe3ygVWYSKmciDfktb-N7EgsWQ9yX41Xs_kIxf0te4Dgl4mWNh06D5rGIzswu0KtHAcEoAaO94oHIa35Lw17vNsPsIOMZh304Hdq0MYxf9DmVCTnUgwFdQmJ8OO_Hu1LhB7x_RR129lAD59BtScYMwZGoLsvwn-r_ycQUihPqTdbtLCKbhCKnmLoIs9zxpfVDfsxa_zLtRKLA1RPZ0FLpxo-SgnaXUszLhQH8qhjkC3_XkP0vrjQ9HWxaectUAQKgMDdA=w1278-h865-no?authuser=0" alt="4">
+                <img src="img\Untitld-3-min.jpg" >
             </div>   
             
             <div class="slide" data-anchor="slide6">
-                <img src="https://lh3.googleusercontent.com/n44qgrSISvmqNRXcTnNEvDuvUh_mcPEf-HV5yl0IZqZ29o4Q8-pFck7IHDGjcPYFdll2zdju6i69F285pAH4MVew_hDQUg640e5o1hhJ_pE4NHEvGWj4aZ1aTk6xAgNukbw9THpAci6867PSwZS3BE_yLgLW2a0xvzDAaZELsrzq8H1Zsd-fdUINdyAPbvAorm76-Y9BDK68OXRZ4cdAcdrJf0ABsg2cgW6yACdk-q1tZvkRlWu-xc0OdGZbvNkRg9KJm-EO9DEyAStRT3k65pL5vKXx-Mw6uXZAK34jLJ4npLWDCfah70XYCYYw3tWMyliJ4-ZAKQJiFFm7vwyFBRBw7RWozsxSjnzvzwV3YEXM-WpOJX6Tdro4GPzrk5LUXtt8X7lWSgN4TavEsTifTeze3gDz1flnbxQbl0pKWuzlR6rFbQftEg5-DN4LLOcxbve15X4wSZZhcZU6-8Huj--oeHU_t19wJP-cmAbx5xvsVMdHOI_yE-AEjzIPfisqb921ePe8yog8GlukRX5ZGD2vwuVd-Oma69HcDF_k7gukXQIuyJY64n_eXyxTb3HIz1qQ1wn3UTVzR-vIZS4e2iSytk8H8-RRj_3gOE56gEo3klh6y-1Fb6F1BOHM1MenybA7-EsW41ypWOrUGNeM3B7jI0qo2zNdwDeFkZfPhNhJhxZWJC3DcHtMGCfQbw=w1278-h865-no?authuser=0" alt="5">
+                <img src="img\another ic3 page-min.jpg" >
             </div>
             <div class="slide" data-anchor="slide7">
-                <img src="https://lh3.googleusercontent.com/5KfUPrT96ChE0dcaWVo1i4CV87exWAyzScZ7nUMCdRFi-pp57vswqEFbEERuG7mtcWNmvmnm5tlTCHSvw1enMy0ezz-H0F_4qmhP-EVEmfFt883TTkZ6YwACISBbkqZBtcnWipXZWyopZDrCpVjTs3QBeAzElKRP5xcuDImztFKsrCTw6rv1teTvRWhvesgO-OZzz2vJ9EvJmdLpal2_-uLqI-RLJaQqK3iSQXEyU2YXz5nXbj6sEAcJp_znmc1yyGLqpZASLrhr_hu_74kaTAoZzNUzHIwM-rMbEoMrRNmdqufdGhdPVmXPmPndw2kucljyp_Db6vjew584ZMpD7m7Qkvsh-vUjfntCJRGxyIDYWQiR0yFuTk8DyNXWvd-xqNfHEXl2vc1aF2DcEqo95z-D25YKs1Y0AFyYvSrjCrKBr1yvzeahgEhwSLvS78KzcTWzOoVbszPy5aZcYT6px-L51sHUXhDMCvuNLxQnlR6oS5Rh-FzcRt_oOVxkIWlukKRiE09gdtjBzfJ02OW9ea7a15E73T5X6Vv0h2vfcE7FXdmvHYBMarXzY49Ubf_0zuNnSgLpt_p4jNYEZvhKBdSB1Ygcx1L7DyoqO3QouuQpe4Tl4Z-y3UXZgULypb8EPGLV0L_MvyR7oWCKiEfiKgpL0o8YrLlQcrK2vvJMY-EW2SmcyZardEQMZBgC9w=w1278-h865-no?authuser=0" alt="6">
+                <img src="img\cloth-min.jpg" >
             </div>   
             
             <div class="slide" data-anchor="slide8">
-                <img src="https://lh3.googleusercontent.com/CMBZBYNmxAqCvZ9Ea8nvwr9rCLH8oYkpQFS757akQqny7Pr1jvdtLSBUk2S_KnY-5g5zeoscVqMALdTflFbcQxmuXxlK2UvzWGEP0ok0RJRGT-oRWA40cI0XewzwvMqoXJR4NnvYfUSd_xXGnWmaxxFAOw--5xKjNaYOVfFyvmJCjfVMPfRJ0FspFDgkQu9OGmPVF4-5LPpH0_wXcN0VMLPW4dZxTJVgTIxUJ-eqvTJ2uw2f3oo7kILu15nJ26-HIkER0egs6Jz1MGWTAavvmyBNqvS2Fbcq5wzjSlzqTemeJgPMLdTXfL2g7WAC7eniyYOA_p1Wm2ICtZfM73kXRWbTpthbSza6aC6e5q8RgZeHjdBs6hz4Uw0NyDwYm3jDkoonC-ev6MUgSG3j19llJiOOWRHBZxTfuATkCSP7khW_dVB06fauKFNAdP3dcnmBo5j3L7OoZDZ5krPxV62ztviFKgU5LcKjnR-JLunkxoCs-Z7brHuKqxBuqdWJ5KQ8gN0IougEi_8qORZrAHq75t6D07yfpDIA8iDSJXDmKz-UycqpkUwdhd4vG91upyx8p7qpwjjmE7p1WU_J4hewPZkT9YLM-z7PYlIIx6rxVaO9kRvJ_hSsYSu-byEUpViw5jejYHKwCUSWMcgTbLOcp3jY9SWRaCyu3sIXx98riErixfsyyg2-ULmjas-MQw=w1278-h865-no?authuser=0" alt="7">
+                <img src="img\fit rate-min.jpg" >
             </div>
             <div class="slide" data-anchor="slide9">
-                <img src="https://lh3.googleusercontent.com/cLBPT2hr50rtB6Y288OlgVlZbI85S2acT0KkanYAHyhKkRCYTaCWIj-DAVshiPiX2zdRWx4LkqG530iXQXSomTAAxJ7-_lamNA9YpTbebNcVi2w3CuyQJujMY5w9NRhkP5cYvlk_ZQZaR9jEQ9QaU6MjA6pQUw7YFQUPiw3qSVAAq6AdlIY2Io4HT2g55j98Z3kc_ItkikVDOy4-SGZRP6MndkJzC3F3ga2gVUEoyrX8fweZxmXowCPFfeejHvB2kzD42Ie346ZV3rw0amWFB3CfPZxYNlKPlDk5gIaWrMOEGD2qIb-BlxLH5CpHWiXBp0Hl87KDP5UiwtABHItMRdOkA0lqiD7sllKiN0qY5d95Zy0Zu9tmrsEwYvhT2RjPekWUimge6zAl4pzQEnSf92lze2iyqIRg-kKjxeELXs6L9lhrbT7QCU8NnE8q4s05NjF85i1sbVwaxOeiPydQL2bHJydCZAwu3TsZeZjjFwm0mEsiwXKLh_dz5nJVIUyDM0mj1FqVvQ0gF0zdOVuBrndcbrPnMW1BGsQKShrM2-2lTboJVNWuZNTTfrap1-ggpm1mmFjcu2efI13HFmPM88VO14FTeCGLPYxhzC-ltqOp8KSxjmpqtjnFptGmB_GkHVmy2caS36CRTZy8REanhaKJTmSgLg-UNl3WAZ7SZBZ1qwAxWiAzLk1y8Ns4ZQ=w1278-h865-no?authuser=0" alt="8">
+                <img src="img\shakes-min.jpg" >
             </div>    
             
             <div class="slide" data-anchor="slide10">
-                <img src="https://lh3.googleusercontent.com/09CdGgTeaaxx9W7nAkL7wEBHsokbuHUoCMLsM3CBzcbzePh5jYLAxzLU7QC0ve1GDozA1bRb4qrhU6_9C6-dNfwNcxLDegxywZ5TqTWsapwk7n6NCfdAP-OpgaRuHSNQQnjG17bc-OxNscVHqXR7cpv7_VHgNiNo96nFRASY0jCFVhALu0KRKr4AuUUehKZsCsiCsZDx1T1d16mZc3sGN-cR8NzXV6yAcGa-v-cOOiXjQFg1nyxhMVVcoi0G0Ni5UI4XsrW6EE-wRFoZYGhfEZsvSTU5isj_4w7HjA0PjqwX9mRKln2VArQhwK3_meIPpp4EZFNIidwClFWLB1BzcK_6sBRLt5-7ERH-nYVEVh7FsIgK798Z3WZhGr4IvD29YRyQvtFYK7MuuHxlkSagPLUixzlxDsCuxLSCTZAftOKbYu-OJlbiUrbNLCOXgNLeybYrvxG6FF1_h-an6cM1wnxqaV-ZKUpI3nLrQdzDxpW5Y4f0Ccfg_xsfDIpEIOlfN5iEZfK1hJLjlY3TCir0zkRsYhEvOlndaNUyd75p6WCxPZTe3rEg_u-nbrfcsrh-Gm5pSOQtcfWLgWqwwgbHSb0f7Aswenm466sz79VT9oH9elDrQAGVS16_NzgyYbHTsxUr6lidoLzoH-ErBD7iA1u0e9wk1kfOU671CxcLpvdr9EFIfX_G18GCKm-LpA=w1278-h865-no?authuser=0" alt="9">
+                <img src="img\NLE-min.jpg" >
             </div>
             <div class="slide" data-anchor="slide11">
-                <img src="https://lh3.googleusercontent.com/0-3227gyrbmE6NIUjLQAvKaY-suZ0kCwsK9YyhgpNNcbltkQ8H4ytJlLp2YSOC0OmM1YfKBcVQWJNtBijo9_2t8R8UJoOglIRMCRngwRifp12IWhTcWdk6NRPOCaaWDGf0mDOMieMnlBvV_u9Rnokqw433BY_nHiGwngswcjZdLbt5lt_rdAaRh0oEyiHzitc9NYZ7QTz94vO8sfrknk06LbL14ygfYgsJ8GSH8K8uiRbVHgRowgi2zkZqD3Hekl_M_8Y8ACVQbrIjtNWWNoAH4Kr_Ae9_WxCwGkZcPbfDKD79Vwr1IMpscJvUPseCZ575B9dQXzoufz4r9L5BH9j5zYU9vefRWDj1G5i9hrOa1zLwP_6vX4R2B_SQ3qMnrRY6E5PxcOT9Z95jGkxnSiv5ULZmEft-r8rmWTEql9H-W1liaHZDnJHQMcS5bhjn8whaqJpzmxl1jiXGWlectmXOiaIa2RVwCQSCR_-XuqQqA0eRKFHPmSQlPhRsY56rRSeevMnxjCdWRvTAxMDZAaCuGtf874Tc8-bHBYKFmFFI4jpytsWy4-dbPtW_3wqRrgd28Cm122uVd_AYPpCNF_cbMF2hOe_DmvTbcNHSBLdJmFtvCUN45w4XYCQRxwXTxDEpFHBEcJC6xScfrTKQl9bexV2H179ASQnIidE_Kh-IcoFn4_vPrBDn4CF02MZQ=w1278-h865-no?authuser=0" alt="10">
+                <img src="img\rich-min.jpg" >
             </div>   
             
             <div class="slide" data-anchor="slide12">
-                <img src="https://lh3.googleusercontent.com/jbLjNwyCpWTyjfawKa373SDFh5bUG41q3XLFv3AcW1lv_R6a6h9eLevezzTTYDZJu7hm4Pow06aJjDx_AfqLhrE_tUWHRvF5AEgQ6R15AJ165jD9gKb7pAYh5zxMEU27tyWRGJGqPZz66BsFaHWlHn7tAx0wkP8q0HP_I56iN_UjWD9lc5bU6bB3QFiwtBKK2e1bDsYl6_OsHm0NfDutveRWY8RPKNyvvYT8xfzROD8N8i6t_s35pDGF1hfV6Tr1uHjP3QO9_Ec202ECWjOtc0l_FMekGVN2DrkdmbTFTd6Q73ZEo30H6B7DjVsBZp27lty7CD8OffJhmKkNL0K4dPox3SkHbHJO2E-uteIoSpuaZIVps9ZliMNH52AzY9_E266VwPUsYWQrAQVMFxayALdHjYhAKaUev2CwqN_pkvsZWdIqGyq-ox2iUTJ5iIVM9CnJW2c4goXo4uNYew680DbhakRlrbXLBVKafM9QGCZOneWkVqnnOROi9jgjyOiOMI8AwxUO30e-t0zorzGcu8OB8Pf7__mXJH0jTlR5qa57YGa4b7Bx57xjXJ6CbbcHE8s00dTHhHmWHunZXsyO6mdDz35xpMKNff0jPcFzx015r0k_kJjJD5WU4jHKBJMmx8U5dMiJ4vsFLARvZld6sAjKuFg5MNiKyOThWmyyEx7F9qEOdLALfzETb8ssvw=w1278-h865-no?authuser=0" alt="11">
+                <img src="img\shisr-min.jpg" >
             </div>
             <div class="slide" data-anchor="slide13">
-                <img src="https://lh3.googleusercontent.com/roQoY-v30p08yTxBhLJrEinEh6vCzCnjjc3kIQ7FsNes0B8BYkQy_a6Ble7ZsUnr8BH6ukUeJxHw34B_B6lJTOoWCAhDZhK4bQMCWw5f-tAmoQ_KFNuejahNtAJDBXHSPl8vrVuV0Rg8NOSIeuczdIEpfaZRGB9bIgLM_xQPDoEZdo2YDygPwteOSV4HTepeokI87_RKGeqnJFs_RjGLOGsbrMlMT72M16-fOFEEdkkHSscRLZ_yWj7h8VSpY2FolWxtv1OUNqgGk1-3pVJaAIqCv0m4TfMT7DGm7rMrg-DOQgPxKI9-zKpZSck3UBDyHayXCbPVh78tqGYSsPIJJXu7yNUauE5AdAVrnnvEsd52gemHUdhTgab-3Qne9K3BiCAM9FW4sFJnRZuXL-KO_FzyIqWzZINz1XwKV2YnI9Gzjiy_j0xGy8G6UkqoaMEUi82oUaCMEdzAD_E4LGi3Q-jUnQ9O5ej0HpjdX6jThDxuTXEmlzxyyi8VT6woi65oVn8twoFNbve6FiuRUfDOkrQgxJOk3vXnHo_MXMGBQIlACAaAEVXMMblHFckdy2tKGbuNPTTiRiQTNRb1VHnnxLF_8xVtVzgg-b5n8c6qtDfEFmQHlt4JGm0n_yHC2PJhkep3blEAZkSxTX6RRnNaZlCT6aWo2TK7BjzoDlnxrhSMGJB7CuIAUwBnDGXukw=w1278-h865-no?authuser=0" alt="12">
+                <img src="img\skiamda-min.jpg" >
             </div>
         </div>
-        <div class="section is3">
-          
+
+        <!-- issue 2 -->
+        <div class="section is4">
+
+                <!-- navbar -->
+                <div class="navbar">
+                    <a href="#firstPage" >back</a>
+                    <a href="#secondPage" >issue 1</a>
+                    <a href="#thirdPage" >issue 2</a>
+                    <a href="#fourthPage" >winter 2019</a>
+                    <a href="#fifthPage" >summer 2020</a>
+                    <a href="#sixthPage" >issue 3</a>
+                </div>
+
+
             <div class="slide" data-anchor="slide1">
+                <h1>winter 2019</h1>
+
+                <div class="btmlft">
+                    scroll down
+                </div>
+            </div>
+            <div class="slide" data-anchor="slide2">
+                <img src="img\story time-min.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide3">
+                <img src="img\trump ralley-min.jpg" >
+            </div>   
+            
+            <div class="slide" data-anchor="slide4">
+                <img src="img\ukkug-min.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide5">
+                <img src="img\Untitld-3-min.jpg" >
+            </div>   
+            
+            <div class="slide" data-anchor="slide6">
+                <img src="img\another ic3 page-min.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide7">
+                <img src="img\cloth-min.jpg" >
+            </div>   
+            
+            <div class="slide" data-anchor="slide8">
+                <img src="img\fit rate-min.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide9">
+                <img src="img\shakes-min.jpg" >
+            </div>    
+            
+            <div class="slide" data-anchor="slide10">
+                <img src="img\NLE-min.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide11">
+                <img src="img\rich-min.jpg" >
+            </div>   
+            
+            <div class="slide" data-anchor="slide12">
+                <img src="img\shisr-min.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide13">
+                <img src="img\skiamda-min.jpg" >
+            </div>
+        </div>
+        
+
+        <!-- issue 2 -->
+        <div class="section is5">
+
+                <!-- navbar -->
+                <div class="navbar">
+                    <a href="#firstPage">back</a>
+                    <a href="#secondPage" >issue 1</a>
+                    <a href="#thirdPage" >issue 2</a>
+                    <a href="#fourthPage" >winter 2019</a>
+                    <a href="#fifthPage" >summer 2020</a>
+                    <a href="#sixthPage" >issue 3</a>
+                </div>
+
+
+            <div class="slide" data-anchor="slide1">
+                <h1>summer 2020</h1>
+
+                <div class="btmlft">
+                    scroll down
+                </div>
+            </div>
+            <div class="slide" data-anchor="slide2">
+                <img src="img\story time-min.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide3">
+                <img src="img\trump ralley-min.jpg" >
+            </div>   
+            
+            <div class="slide" data-anchor="slide4">
+                <img src="img\ukkug-min.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide5">
+                <img src="img\Untitld-3-min.jpg" >
+            </div>   
+            
+            <div class="slide" data-anchor="slide6">
+                <img src="img\another ic3 page-min.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide7">
+                <img src="img\cloth-min.jpg" >
+            </div>   
+            
+            <div class="slide" data-anchor="slide8">
+                <img src="img\fit rate-min.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide9">
+                <img src="img\shakes-min.jpg" >
+            </div>    
+            
+            <div class="slide" data-anchor="slide10">
+                <img src="img\NLE-min.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide11">
+                <img src="img\rich-min.jpg" >
+            </div>   
+            
+            <div class="slide" data-anchor="slide12">
+                <img src="img\shisr-min.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide13">
+                <img src="img\skiamda-min.jpg" >
+            </div>
+        </div>
+
+
+        <!-- issue 3 -->
+        <div class="section is6">
+
+
+            <div class="slide" data-anchor="slide1">
+                    
+                <!-- navbar -->
+                <div class="navbar6">
+                    <a href="#firstPage">back</a>
+                    <a href="#secondPage" >issue 1</a>
+                    <a href="#thirdPage" >issue 2</a>
+                    <a href="#fourthPage" >winter 2019</a>
+                    <a href="#fifthPage" >summer 2020</a>
+                    <a href="#sixthPage" >issue 3</a>
+                </div>
+                    
                 <h1>ISSUE #3</h1>
 
                 <div class="btmlft">
@@ -166,6 +443,7 @@
             </div>
 
         </div>
+
     </div>
 
 
@@ -176,12 +454,12 @@
             //Navigation
             menu: '#menu',
             lockAnchors: false,
-            anchors:['firstPage', 'secondPage', 'thirdPage'],
+            anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
             navigation: false,
             navigationPosition: 'right',
             navigationTooltips: ['firstSlide', 'secondSlide'],
             showActiveTooltip: false,
-            slidesNavigation: false,
+            slidesNavigation: true,
             slidesNavPosition: 'bottom',
 
             //Scrolling
@@ -219,14 +497,14 @@
             //Design
             controlArrows: true,
             verticalCentered: true,
-            sectionsColor : ['#4a2000', '#f7cdcf', '#FFEB78'],
-            paddingTop: '3em',
-            paddingBottom: '10px',
+            sectionsColor : ['#4a2000', '#a3fbcf','#f7cdcf', '#FFEB78', '#f99c8f', '#f8c2ff'],
+            paddingTop: '40px',
+            paddingBottom: '40px',
             fixedElements: '#header, .footer',
             responsiveWidth: 0,
             responsiveHeight: 0,
             responsiveSlides: false,
-            parallax: false,
+            parallax: true,
             parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
             cards: false,
             cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
