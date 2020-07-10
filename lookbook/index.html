@@ -7,6 +7,9 @@
     <link rel="icon" href="/icons/favicon.ico">
     <link rel="stylesheet" href="/fonts/stylesheet.css">
     <link rel="stylesheet" href="fullpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="nav.css">
+    <script src="nav.js"></script>
 </head>
 <body>
     <style>
@@ -114,7 +117,7 @@
             position: absolute;
             top: 1%;
             left: 2%;
-            font-size: 3vw;
+            font-size: 25px;
             color: #b9f2ff;
         }
 
@@ -127,7 +130,7 @@
             position: absolute;
             right: 2%;
             top: 1%;
-            font-size: 3vw;
+            font-size: 25px;
         }
 
 
@@ -164,19 +167,25 @@
 
         .btnwrap {
             text-align: center;
-            display: inline-block
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            position: absolute;
         }
 
         .btnwrap a {
-            padding-top: 5%;
-        }
+            display: flex;
+        } 
 
     </style>
 
     <div id="fullpage">
+        
         <div class="section is1">
-            <h1>lookbook</h1>
-            <h2 class="home"><a href="/main/index.html">home</a></h2>
+
+            <h1>LOOKBOOK</h1>
+            <h2><a href="/main/index.html">home</a></h2>
 
             <div class="btnwrap">
                 <a href="#secondPage" class="coolBeans">issue 1</a>
@@ -185,12 +194,14 @@
                 <a href="#fifthPage" class="coolBeans">summer 2020</a>
                 <a href="#sixthPage" class="coolBeans">issue 3</a>
             </div>
+
+            <div class="btmlft">scroll down</div>
            
         </div>  
 
         <!-- issue 1 -->
         <div class="section is2">
-                  
+
                 <!-- navbar -->
             <div class="navbar">
                 <a href="#firstPage">back</a>
@@ -199,7 +210,7 @@
                 <a href="#fourthPage" >winter 2019</a>
                 <a href="#fifthPage" >summer 2020</a>
                 <a href="#sixthPage" >issue 3</a>
-            </div>
+            </div> 
 
 
                 <!-- slide 1 -->
@@ -305,50 +316,48 @@
                 </div>
             </div>
             <div class="slide" data-anchor="slide2">
-                <img src="img\story time-min.jpg" >
+                <img src="wint/arora.jpg" >
             </div>
             <div class="slide" data-anchor="slide3">
-                <img src="img\trump ralley-min.jpg" >
+                <img src="wint/blue1.jpg" >
             </div>   
             
             <div class="slide" data-anchor="slide4">
-                <img src="img\ukkug-min.jpg" >
+                <img src="wint/blue2.jpg" >
             </div>
             <div class="slide" data-anchor="slide5">
-                <img src="img\Untitld-3-min.jpg" >
+                <img src="wint/cloth1.jpg" >
             </div>   
             
             <div class="slide" data-anchor="slide6">
-                <img src="img\another ic3 page-min.jpg" >
+                <img src="wint/cloth2.jpg" >
             </div>
             <div class="slide" data-anchor="slide7">
-                <img src="img\cloth-min.jpg" >
+                <img src="wint/hoodies.jpg" >
             </div>   
             
             <div class="slide" data-anchor="slide8">
-                <img src="img\fit rate-min.jpg" >
+                <img src="wint/mieky.jpg" >
             </div>
             <div class="slide" data-anchor="slide9">
-                <img src="img\shakes-min.jpg" >
+                <img src="wint/mikey2.jpg" >
             </div>    
             
             <div class="slide" data-anchor="slide10">
-                <img src="img\NLE-min.jpg" >
+                <img src="wint/pants.jpg" >
             </div>
             <div class="slide" data-anchor="slide11">
-                <img src="img\rich-min.jpg" >
+                <img src="wint/shirts.jpg" >
             </div>   
             
             <div class="slide" data-anchor="slide12">
-                <img src="img\shisr-min.jpg" >
+                <img src="wint/snow.jpg" >
             </div>
-            <div class="slide" data-anchor="slide13">
-                <img src="img\skiamda-min.jpg" >
-            </div>
+            
         </div>
         
 
-        <!-- issue 2 -->
+        <!-- summer 2020 -->
         <div class="section is5">
 
                 <!-- navbar -->
@@ -369,47 +378,26 @@
                     scroll down
                 </div>
             </div>
+
+            <!-- pictures -->
             <div class="slide" data-anchor="slide2">
-                <img src="img\story time-min.jpg" >
+                <img src="sum/dope.jpg" >
             </div>
             <div class="slide" data-anchor="slide3">
-                <img src="img\trump ralley-min.jpg" >
+                <img src="sum/dope2.jpg" >
             </div>   
             
             <div class="slide" data-anchor="slide4">
-                <img src="img\ukkug-min.jpg" >
+                <img src="sum/Dopew.jpg" >
             </div>
             <div class="slide" data-anchor="slide5">
-                <img src="img\Untitld-3-min.jpg" >
+                <img src="sum/shirt1.jpg" >
             </div>   
             
             <div class="slide" data-anchor="slide6">
-                <img src="img\another ic3 page-min.jpg" >
+                <img src="sum/hoodie.jpg" >
             </div>
-            <div class="slide" data-anchor="slide7">
-                <img src="img\cloth-min.jpg" >
-            </div>   
-            
-            <div class="slide" data-anchor="slide8">
-                <img src="img\fit rate-min.jpg" >
-            </div>
-            <div class="slide" data-anchor="slide9">
-                <img src="img\shakes-min.jpg" >
-            </div>    
-            
-            <div class="slide" data-anchor="slide10">
-                <img src="img\NLE-min.jpg" >
-            </div>
-            <div class="slide" data-anchor="slide11">
-                <img src="img\rich-min.jpg" >
-            </div>   
-            
-            <div class="slide" data-anchor="slide12">
-                <img src="img\shisr-min.jpg" >
-            </div>
-            <div class="slide" data-anchor="slide13">
-                <img src="img\skiamda-min.jpg" >
-            </div>
+           
         </div>
 
 
@@ -498,13 +486,13 @@
             controlArrows: true,
             verticalCentered: true,
             sectionsColor : ['#4a2000', '#a3fbcf','#f7cdcf', '#FFEB78', '#f99c8f', '#f8c2ff'],
-            paddingTop: '40px',
-            paddingBottom: '40px',
+            paddingTop: '55px',
+            paddingBottom: '55px',
             fixedElements: '#header, .footer',
             responsiveWidth: 0,
             responsiveHeight: 0,
-            responsiveSlides: false,
-            parallax: true,
+            responsiveSlides: true,
+            parallax: false,
             parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
             cards: false,
             cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
