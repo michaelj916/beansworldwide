@@ -10,173 +10,7 @@
     
 </head>
 <body>
-    <style>
-
-        html, body {
-            font-family: 'silkscreennormal';
-        }
-        .section h1 {
-            font-size: 7vw;
-        }
-
-        .is2 {
-            color: #ffffff;
-        }
-
-        .is3 {
-            color: #000;
-        }
-
-        .is4 {
-            color: #fff;
-        }
-
-        .is5 {
-            color: #fff;
-        }
-
-        .is2, .is3, .is4, .is5, .is6 {
-            text-align: center;
-        }
-        .slide img {
-            align-items: center;
-            width: 80%;
-            height: auto;
-            margin: 0 auto;
-        }
-        .btmlft {
-            color: #ffffff;
-            position: fixed;
-            bottom: 15px;
-            left: 15px;
-            opacity: 50%;
-            font-size: 1rem;
-        }
-        .btmrt {
-            color: #000;
-            position: fixed;
-            bottom: 15px;
-            right: 15px;
-            opacity: 50%;
-            font-size: 2vw;
-        }
-
-        @media only screen and (max-width: 414px) {
-            .navbar a {
-                font-size: 2rem;
-            }
-        }
-
-        .navbar {
-            width: 100%;
-            height: 4%;
-            top: 2%;
-            position: absolute;
-            z-index: 999;
-            opacity: 90%;
-
-        }
-        .navbar a {
-            text-decoration: none;
-            color: white;
-            float: left;
-            padding-left: 1%;
-            font-size: 2vw;
-            padding-right: 2%;
-        }    
-
-        .navbar a:hover {
-            color: #93ebffdc;
-        }
-
-        .navbar6 {
-            width: 100%;
-            height: auto;
-            top: 2%;
-            position: absolute;
-            z-index: 999;
-            opacity: 90%;
-
-        }
-        .navbar6 a {
-            text-decoration: none;
-            color: white;
-            float: left;
-            padding-left: 1%;
-            font-size: 2vw;
-            padding-right: 1%;
-        }    
-
-        .navbar6 a:hover {
-            color: #93ebffdc;
-        }
-
-        .is1 h1 {
-            position: absolute;
-            top: 1%;
-            left: 2%;
-            font-size: 25px;
-            color: #b9f2ff;
-        }
-
-        .is1 a {
-            text-decoration: none;
-            color: #b9f2ff;
-        }
-
-        .is1 h2 {
-            position: absolute;
-            right: 2%;
-            top: 1%;
-            font-size: 25px;
-        }
-
-
-        .coolBeans {
-            font-size: 4rem;
-            font-weight: 100;
-            overflow: hidden;
-            padding: 1rem 2rem;
-            position: relative;
-            text-decoration: none;
-            transition: 0.2s transform ease-in-out;
-            will-change: transform;
-            z-index: 0;
-        }
-        .coolBeans::after {
-            content: '';
-            display: block;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            will-change: transform;
-            z-index: -1;
-        }
-        .coolBeans:hover::after {
-            transform: translate(0, 0);
-        }
-        .coolBeans:hover {
-            color: gold;
-            transform: scale(1.05);
-            will-change: transform;
-        }
-
-        .btnwrap {
-            text-align: center;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            position: absolute;
-        }
-
-        .btnwrap a {
-            display: flex;
-        } 
-
-    </style>
+    <style> body,html{font-family:silkscreennormal}.section h1{font-size:7vw}.is2{color:#fff}.is3{color:#000}.is4{color:#fff}.is5{color:#fff}.is2,.is3,.is4,.is5,.is6{text-align:center}.slide img{align-items:center;width:80%;height:auto;margin:0 auto}.btmlft{color:#fff;position:fixed;bottom:15px;left:15px;opacity:50%;font-size:1rem}.btmrt{color:#000;position:fixed;bottom:15px;right:15px;opacity:50%;font-size:2vw}@media only screen and (max-width:414px){.navbar a{font-size:2rem}}.navbar{width:100%;height:4%;top:2%;position:absolute;z-index:999;opacity:90%}.navbar a{text-decoration:none;color:#fff;float:left;padding-left:1%;font-size:2vw;padding-right:2%}.navbar a:hover{color:#93ebffdc}.navbar6{width:100%;height:auto;top:2%;position:absolute;z-index:999;opacity:90%}.navbar6 a{text-decoration:none;color:#fff;float:left;padding-left:1%;font-size:2vw;padding-right:1%}.navbar6 a:hover{color:#93ebffdc}.is1 h1{position:absolute;top:1%;left:2%;font-size:25px;color:#b9f2ff}.is1 a{text-decoration:none;color:#b9f2ff}.is1 h2{position:absolute;right:2%;top:1%;font-size:25px}.coolBeans{font-size:4rem;font-weight:100;overflow:hidden;padding:1rem 2rem;position:relative;text-decoration:none;transition:.2s transform ease-in-out;will-change:transform;z-index:0}.coolBeans::after{content:'';display:block;height:100%;width:100%;position:absolute;left:0;top:0;will-change:transform;z-index:-1}.coolBeans:hover::after{transform:translate(0,0)}.coolBeans:hover{color:gold;transform:scale(1.05);will-change:transform}.btnwrap{text-align:center;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);position:absolute}.btnwrap a{display:flex} </style>
 
     <div id="fullpage">
         
@@ -188,8 +22,8 @@
             <div class="btnwrap">
                 <a href="#secondPage" class="coolBeans">issue 1</a>
                 <a href="#thirdPage" class="coolBeans">issue 2</a>
-                <a href="#fourthPage" class="coolBeans">winter 2019</a>
-                <a href="#fifthPage" class="coolBeans">summer 2020</a>
+                <a href="#fourthPage" class="coolBeans">summer 2019</a>
+                <a href="#fifthPage" class="coolBeans">fall / winter 2019</a>
                 <a href="#sixthPage" class="coolBeans">issue 3</a>
             </div>
 
@@ -205,8 +39,8 @@
                 <a href="#firstPage">back</a>
                 <a href="#secondPage" >issue 1</a>
                 <a href="#thirdPage" >issue 2</a>
-                <a href="#fourthPage" >winter 2019</a>
-                <a href="#fifthPage" >summer 2020</a>
+                <a href="#fourthPage" >summer 2019</a>
+                <a href="#fifthPage" >fall / winter 2019</a>
                 <a href="#sixthPage" >issue 3</a>
             </div> 
 
@@ -245,14 +79,14 @@
         <div class="section is3">
 
                 <!-- navbar -->
-                <div class="navbar">
-                    <a href="#firstPage">back</a>
-                    <a href="#secondPage" >issue 1</a>
-                    <a href="#thirdPage" >issue 2</a>
-                    <a href="#fourthPage" >winter 2019</a>
-                    <a href="#fifthPage" >summer 2020</a>
-                    <a href="#sixthPage" >issue 3</a>
-                </div>
+            <div class="navbar">
+                <a href="#firstPage">back</a>
+                <a href="#secondPage" >issue 1</a>
+                <a href="#thirdPage" >issue 2</a>
+                <a href="#fourthPage" >summer 2019</a>
+                <a href="#fifthPage" >fall / winter 2019</a>
+                <a href="#sixthPage" >issue 3</a>
+            </div> 
 
 
             <div class="slide" data-anchor="slide1">
@@ -305,27 +139,73 @@
             </div>
         </div>
 
-        <!-- issue 2 -->
+        <!-- summer 2019 -->
         <div class="section is4">
 
                 <!-- navbar -->
-                <div class="navbar">
-                    <a href="#firstPage" >back</a>
-                    <a href="#secondPage" >issue 1</a>
-                    <a href="#thirdPage" >issue 2</a>
-                    <a href="#fourthPage" >winter 2019</a>
-                    <a href="#fifthPage" >summer 2020</a>
-                    <a href="#sixthPage" >issue 3</a>
-                </div>
+            <div class="navbar">
+                <a href="#firstPage">back</a>
+                <a href="#secondPage" >issue 1</a>
+                <a href="#thirdPage" >issue 2</a>
+                <a href="#fourthPage" >summer 2019</a>
+                <a href="#fifthPage" >fall / winter 2019</a>
+                <a href="#sixthPage" >issue 3</a>
+            </div> 
 
 
             <div class="slide" data-anchor="slide1">
-                <h1>winter 2019</h1>
+                <h1>summer 2019</h1>
 
                 <div class="btmlft">
                     scroll down
                 </div>
             </div>
+
+            <!-- summer 2019 pics -->
+            <div class="slide" data-anchor="slide2">
+                <img src="sum/dope.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide3">
+                <img src="sum/dope2.jpg" >
+            </div>   
+            
+            <div class="slide" data-anchor="slide4">
+                <img src="sum/Dopew.jpg" >
+            </div>
+            <div class="slide" data-anchor="slide5">
+                <img src="sum/shirt1.jpg" >
+            </div>   
+            
+            <div class="slide" data-anchor="slide6">
+                <img src="sum/hoodie.jpg" >
+            </div>
+         
+        </div>
+        
+
+        <!-- fall/winter 2019 -->
+        <div class="section is5">
+
+                <!-- navbar -->
+            <div class="navbar">
+                <a href="#firstPage">back</a>
+                <a href="#secondPage" >issue 1</a>
+                <a href="#thirdPage" >issue 2</a>
+                <a href="#fourthPage" >summer 2019</a>
+                <a href="#fifthPage" >fall / winter 2019</a>
+                <a href="#sixthPage" >issue 3</a>
+            </div> 
+
+
+            <div class="slide" data-anchor="slide1">
+                <h1>fall / winter 2019</h1>
+
+                <div class="btmlft">
+                    scroll down
+                </div>
+            </div>
+
+            <!-- fall/winter 2019 pics -->
             <div class="slide" data-anchor="slide2">
                 <img src="wint/arora.jpg" >
             </div>
@@ -364,50 +244,6 @@
             <div class="slide" data-anchor="slide12">
                 <img src="wint/snow.jpg" >
             </div>
-            
-        </div>
-        
-
-        <!-- summer 2020 -->
-        <div class="section is5">
-
-                <!-- navbar -->
-                <div class="navbar">
-                    <a href="#firstPage">back</a>
-                    <a href="#secondPage" >issue 1</a>
-                    <a href="#thirdPage" >issue 2</a>
-                    <a href="#fourthPage" >winter 2019</a>
-                    <a href="#fifthPage" >summer 2020</a>
-                    <a href="#sixthPage" >issue 3</a>
-                </div>
-
-
-            <div class="slide" data-anchor="slide1">
-                <h1>summer 2020</h1>
-
-                <div class="btmlft">
-                    scroll down
-                </div>
-            </div>
-
-            <!-- pictures -->
-            <div class="slide" data-anchor="slide2">
-                <img src="sum/dope.jpg" >
-            </div>
-            <div class="slide" data-anchor="slide3">
-                <img src="sum/dope2.jpg" >
-            </div>   
-            
-            <div class="slide" data-anchor="slide4">
-                <img src="sum/Dopew.jpg" >
-            </div>
-            <div class="slide" data-anchor="slide5">
-                <img src="sum/shirt1.jpg" >
-            </div>   
-            
-            <div class="slide" data-anchor="slide6">
-                <img src="sum/hoodie.jpg" >
-            </div>
            
         </div>
 
@@ -419,14 +255,14 @@
             <div class="slide" data-anchor="slide1">
                     
                 <!-- navbar -->
-                <div class="navbar6">
-                    <a href="#firstPage">back</a>
-                    <a href="#secondPage" >issue 1</a>
-                    <a href="#thirdPage" >issue 2</a>
-                    <a href="#fourthPage" >winter 2019</a>
-                    <a href="#fifthPage" >summer 2020</a>
-                    <a href="#sixthPage" >issue 3</a>
-                </div>
+            <div class="navbar">
+                <a href="#firstPage">back</a>
+                <a href="#secondPage" >issue 1</a>
+                <a href="#thirdPage" >issue 2</a>
+                <a href="#fourthPage" >summer 2019</a>
+                <a href="#fifthPage" >fall / winter 2019</a>
+                <a href="#sixthPage" >issue 3</a>
+            </div> 
                     
                 <h1>ISSUE #3</h1>
 
