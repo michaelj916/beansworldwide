@@ -3,9 +3,7 @@ body {
   font-family: 'silkscreennormal';
 }
 
-img {
-  width: 100%;
-}
+
 
 body {
   margin: 0;
@@ -13,7 +11,8 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .grid {
@@ -28,10 +27,18 @@ img {
 
 .grid-item  {
   padding: .6%;
+
 }
 
+.grid-sizer { width: 33.333%; }
+
+/* .grid-item img {
+  max-width: 100%;
+  height: auto;
+} */
+
 .container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 .content {
@@ -137,12 +144,4 @@ body::-webkit-scrollbar-thumb {
       }
     }
 
-    .h {
-      display: hidden;
-    }
-
-@media only screen and (max-width: 768px) {
-  .h {
-    display: block;
-  }
-}
+    
