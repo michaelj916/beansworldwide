@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: silkscreennormal, sans-serif;
+    background-color: linear-gradient(#F4FAFE, #EDF2F6);
+}
+
+.main-carousel {
+    position: relative;
+    vertical-align: center !important;
+}
+
+.main-carousel img {
+    display: block;
+    height: 600px;
+    padding-right: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.back {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    font-size: 34px;
+    font-weight: 600;
+}
