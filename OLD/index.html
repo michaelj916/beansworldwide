@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html amp class="crt">
+<head>
+	<title>BEANS</title>
+	<meta charset="utf-8">
+	<meta name="description" content="BEANS">
+	<meta name="keywords" content="Beans magazine, BEANS MAGAZINE, beans magazine, Beans clothing, BEANS CLOTHING, beans clothing, Beans los angeles, BEANS LOS ANGELES, beans los angeles, Beans orange county, BEANS ORANGE COUNTY, beans orange county, Beans clothing orange county, BEANS CLOTHING ORANGE COUNTY, beans clothing orange county, Beans shirt, BEANS SHIRT, beans shirt, Beans hoodie, BEANS HOODIE, beans hoodie, Beans pants, BEANS PANTS, beans pants, Beans hat, BEANS HAT, beans hat, Aaron hull hoodie, AARON HULL HOODIE, aaron hull hoodie, Aaron hull clothes, AARON HULL CLOTHES, aaron hull clothes, Aaron hull beans hoodie, AARON HULL BEANS HOODIE, aaron hull beans hoodie, Beans hoodie aaron hull, BEANS HOODIE AARON HULL, beans hoodie aaron hull, Hoodie beans aaron hull, HOODIE BEANS AARON HULL, hoodie beans aaron hull, Supreme, SUPREME, supreme, Clothing, CLOTHING, clothing, Supreme hoodie, SUPREME HOODIE, supreme hoodie, Supreme shirt, SUPREME SHIRT, supreme shirt, Supreme beans, SUPREME BEANS, supreme beans, Travis scott, TRAVIS SCOTT, travis scott, Grailed, GRAILED, grailed, Thrift, THRIFT, thrift, Thrifting, THRIFTING, thrifting, Thrift clothing, THRIFT CLOTHING, thrift clothing, Thrifted hoodie, THRIFTED HOODIE, thrifted hoodie, Beans tiktok, BEANS TIKTOK, beans tiktok, Beans instagram, BEANS INSTAGRAM, beans instagram, Beans.mag, BEANS.MAG, beans.mag, Beans magazine instagram, BEANS MAGAZINE INSTAGRAM, beans magazine instagram, Beans magazine hoodie, BEANS MAGAZINE HOODIE, beans magazine hoodie, Beans stickers, BEANS STICKERS, beans stickers, Beans magazine stickers, BEANS MAGAZINE STICKERS, beans magazine stickers, Beans media, BEANS MEDIA, beans media, Stray rats, STRAY RATS, stray rats, Tyler the creator, TYLER THE CREATOR, tyler the creator, Golf wang hoodie, GOLF WANG HOODIE, golf wang hoodie, Los angeles hoodies, LOS ANGELES HOODIES, los angeles hoodies, Skate brand, SKATE BRAND, skate brand, Skate brand hoodie, SKATE BRAND HOODIE, skate brand hoodie, Fairfax clothing, FAIRFAX CLOTHING, fairfax clothing, Fairfax beans, FAIRFAX BEANS, fairfax beans, Playboi carti clothing, PLAYBOI CARTI CLOTHING, playboi carti clothing, Clothing brand, CLOTHING BRAND, clothing brand, Magazine, MAGAZINE, magazine">
+	<meta name="author" content="Michael Jarrah">
+	<meta name="viewport" content="width=device-width,  initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="landing/css/landing.css">
+	<link rel="stylesheet" type="text/css" href="landing/css/overlays.css">
+	<link rel="icon" href="/icons/favicon.ico">
+	<script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		function delay (URL) {
+			setTimeout( function() { window.location = URL }, 550 );
+		}
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+	        $("#click-enter").click(function(){
+	            $(".turnon-anim").addClass("turnoff-anim");
+	        });
+
+
+	        $('.turnon-anim').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+	             $(this).removeClass("turnoff-anim");
+	        });
+	    });
+	</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165561742-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-165561742-1');
+</script>
+
+</head>
+<body>
+	
+	<div class="turnon-anim">
+		<div id="click-enter" onclick="delay('main/index.html')">
+			<div class="cursor"></div>
+		</div>
+	</div>
+
+	<script>
+		// creating a custom cursor tracker 
+
+		const cursor = document.querySelector('.cursor');
+
+		document.addEventListener('mousemove', e => {
+			cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+		});
+
+		document.addEventListener('click', () => {
+			cursor.classList.add("expand");
+
+			setTimeout(() => {
+				cursor.classList.remove("expand");	
+			}, 500)
+		});
+
+	</script>
+</body>
+</html>
