@@ -1,6 +1,6 @@
 body {
     background: black;
-    font-family: 'silkscreennormal';
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
 }
@@ -12,7 +12,7 @@ canvas {
 .topnav {
     background-color: #000000;
     overflow: hidden;
-    font-family: 'silkscreennormal';
+    font-family: 'Courier New', Courier, monospace;
     position: fixed;
     top: 0;
     left: 0;
