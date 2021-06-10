@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
 }
 
 img {
@@ -10,7 +11,7 @@ img {
 
 .grid {
   display: flex;
-  padding-top: 10%;
+  padding-top: 50px;
 }
 
 .grid-col {
@@ -19,8 +20,7 @@ img {
 }
 
 .grid-item  {
-  padding: .6%;
-
+  padding: 5px;
 }
 
 .grid-sizer { width: 33.333%; }
@@ -42,6 +42,9 @@ img {
 }
 
 @media (max-width: 768px) {
+  .grid {
+    padding-top: 25px;
+  }
   .container {
     width: 90%;
   }
@@ -84,12 +87,12 @@ body::-webkit-scrollbar-thumb {
 .topnav a {
   float: left;
   display: block;
-  color: gold;
+  color: #000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1vw;
-  font-weight: 800;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 /* Change the color of links on hover */
@@ -100,10 +103,10 @@ body::-webkit-scrollbar-thumb {
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #b9f2ff;
-  color: white;
-  font-weight: 800;
-  font-size: 1vw;
+  background-color: #00000017;
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
 }
 
     /* Hide the link that should open and close the topnav on small screens */
@@ -132,10 +135,10 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
   }
   .topnav.responsive a.icon {
-    position: absolute;
-    right: 10px;
+    position: fixed;
+    right: 20px;
     top: 10px; 
-    background: transparent;
+    background-color: #00000017;
     color: #000000ea;
   }
   .topnav.responsive a {
@@ -144,7 +147,7 @@ body::-webkit-scrollbar-thumb {
     text-align: left;
   }
   .topnav a.active, .topnav a  {
-    font-size: 20px;
+    font-size: 10px;
   }
 }
  
