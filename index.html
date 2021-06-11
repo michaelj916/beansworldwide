@@ -13,13 +13,14 @@
 </head>
 <body>
     <div class="vid-background">
-        <video preload playsinline autoplay="autoplay" muted loop id="bckgrnd-vid">
-            <source src="assets/media/vids/bckgrnd/web.mp4" type="video/mp4">
+        <video playsinline autoplay muted loop id="bckgrnd-vid">
+            <source id="background-video" src="assets/media/vids/bckgrnd/web.mp4" type="video/mp4">
+            <source id="background-video" src="assets/media/vids/bckgrnd/web.m3u8">
         </video>
-    </div>
+    </div> 
 
     <div class="banner">
-        <img id="banner-img" src="assets/media/vids/banners/skateboard.jpg" alt="">
+        <img id="banner-img" src="assets/media/img/banners/skateboard.jpg" alt="">
     </div>
 
 
@@ -46,5 +47,13 @@
             </li>
         </ul>
     </div>
+
+    <script>
+        var responsive = window.matchMedia('(max-width: 768px)');
+        var vidContainer = document.querySelector('.vid-background')
+        if (responsive.matches) {
+            vidContainer.setAttribute('style', '')
+        }
+    </script>
 </body>
 </html>
