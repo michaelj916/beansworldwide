@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 400;
+  overflow: none !important;
 }
 
 img {
@@ -23,6 +24,15 @@ img {
   padding: 5px;
 }
 
+.grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+.grid-item-mobile {
+  display: none;
+}
+
 .grid-sizer { width: 33.333%; }
 
 /* .grid-item img {
@@ -31,39 +41,20 @@ img {
 } */
 
 .container {
+  position: absolute;
   width: 100%;
+  top: 110%;
   margin: 0 auto;
 }
 .content {
-  position: absolute;
+  position: relative;
   background: #5a56564d;
   color: #fff;
   margin-top: 1em;
 }
 
-@media (max-width: 768px) {
-  .grid {
-    padding-top: 25px;
-  }
-  .container {
-    width: 90%;
-  }
-
-  .grid-col--2, .grid-col--3 {
-    display: none;
-  }
-
-  .grid-col {
-    padding: 0 .5em;
-  }
-
-  img {
-    margin-bottom: .8em;
-  }
-}
-
 body::-webkit-scrollbar {
-  width: 0.25rem;
+  width: 10px;
 }
 
 body::-webkit-scrollbar-track {
@@ -92,7 +83,7 @@ body::-webkit-scrollbar-thumb {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 /* Change the color of links on hover */
@@ -105,32 +96,78 @@ body::-webkit-scrollbar-thumb {
 .topnav a.active {
   background-color: #00000017;
   color: #000;
-  font-weight: 400;
+  font-weight: 800;
   font-size: 18px;
 }
 
-    /* Hide the link that should open and close the topnav on small screens */
-    .topnav .icon {
-      display: none;
-      color: #000000;
-      background: #00000017;
-      
-    }
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  color: #000000;
+  display: none;
+  background: #00000017;    
+}
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+#carousel-vid {
+  width: 350px;
+  height: auto;
+}
+
+#rotating-item-wrapper {
+  position: absolute;
+  padding: 15px;
+  width: 6000px;
+  height: 100%;
+  top: 8%;
+  overflow-x: scroll !important;
+   
+}
+
+@media (max-width: 768px) {
+  .grid {
+    padding-top: 25px;
+  }
+
+  .grid-item img {
+    width: 100% !important; 
+    height: auto !important;
+  }
+  .container {
+    width: 100%;
+  }
+
+  .grid-col--2, .grid-col--3 {
+    display: none;
+  }
+
+  .grid-item-mobile {
+    display: flex;
+  }
+
+  .grid-col {
+    padding: 15px;
+  }
+
+  img {
+    margin-bottom: 0.8em;
+  }
+
+  #carousel-vid {
+    width: 250px;
+  }
+}
+
+/* the "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
   }
+
   .topnav a.icon {
     float: right;
     display: block;
     color: #000000ea;
   }
-}
- 
-/* the "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+
   .topnav.responsive {
     position: fixed;
   }
@@ -150,4 +187,3 @@ body::-webkit-scrollbar-thumb {
     font-size: 10px;
   }
 }
- 
