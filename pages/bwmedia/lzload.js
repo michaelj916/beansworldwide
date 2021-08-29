@@ -1,5 +1,7 @@
+// find all data-src attributed images
 const targets = document.querySelectorAll('[data-src]');
 
+// on scroll, display images
 const lazyLoad = target => {
     const io = new IntersectionObserver((entries, observer) => {
 
@@ -20,4 +22,5 @@ const lazyLoad = target => {
     io.observe(target);
 };
 
+// load in all images
 targets.forEach(lazyLoad);
