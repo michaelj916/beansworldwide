@@ -13,18 +13,23 @@
 </head>
 <body>
     <div class="vid-background">
-        <video playsinline autoplay muted loop id="bckgrnd-vid">
+        <iframe src="https://www.youtube.com/embed/vh5o0UZkF0s?controls=0" frameborder="0" allowfullscreen></iframe>
+        <!-- <video playsinline autoplay muted loop id="bckgrnd-vid">
             <source id="background-video" src="assets/media/vids/bckgrnd/webvud.mp4" type="video/mp4">
             <source id="background-video" src="assets/media/vids/bckgrnd/webvudCrop.m3u8">
-        </video>
+        </video> -->
     </div> 
 
     <div class="banner">
-        <img id="banner-img" src="assets/media/img/banners/skateboard.jpg" alt="">
+        <img id="banner-img">
     </div>
     
     <div class="nav-container">
         <ul class="nav-ul">
+            <li class="nav-link">
+                <a target="_blank" class="link-item" href="https://www.beans-magazine.com/clothes">clothes</a>
+            </li>
+        <!-- 
             <li class="nav-link">
                 <a target="_blank" class="link-item" href="https://www.beans-magazine.com/clothes/352cmnhfl88gwyj6onkr5o7suoc99d">magazine</a>
             </li>
@@ -43,7 +48,24 @@
             <li class="nav-link">
                 <a target="_blank" class="link-item" href="https://www.beans-magazine.com/contact">about</a>
             </li>
+         -->
         </ul>
     </div>
+    <script>
+        // variables for banner element, path str, img numbers
+        var banner = document.getElementById("banner-img");
+        var path = "assets/media/img/landing/";
+        var nums = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13];
+        banner.src = path.concat(nums[12], ".jpg");
+
+        // update img path using a random number to select a photo from: path
+        function updatePath() {
+            var rnum = Math.floor(Math.random() * 13);
+            banner.src = path.concat(nums[rnum], ".jpg");
+        }
+
+        //     calls f(x) for , delay (ms)
+        setInterval(updatePath, 1000);
+    </script>
 </body>
 </html>
