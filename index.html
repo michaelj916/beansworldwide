@@ -57,14 +57,18 @@
         var banner = document.getElementById("banner-img");
         var path = "assets/media/img/landing/";
         var nums = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13];
-        banner.src = path.concat(nums[Math.floor(Math.random() * 13)], ".jpg");
+        banner.src = path.concat(nums[0], ".jpg");
+        var rnum = 0;
 
         // update img path using a random number to select a photo from: path
         function updatePath() {
-            var rnum = Math.floor(Math.random() * 13);
             banner.src = path.concat(nums[rnum], ".jpg");
+            rnum += 1;
+            if (rnum == 13) {
+            rnum = 0;
+            }
         }
-
+   
         //     calls f(x) for , delay (ms)
         setInterval(updatePath, 750);
     </script>
