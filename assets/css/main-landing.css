@@ -16,7 +16,6 @@ body {
 ul {
     padding: 15px;
     border: solid 1px #00000046;    
-    opacity: 80%;
     background: #000;
     border-radius: 5%;
 }
@@ -46,7 +45,6 @@ a:hover {
 
 .vid-background {
     position: fixed;
-    opacity: 90%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -61,6 +59,7 @@ a:hover {
 }
 
 .banner {
+    opacity: 50%;
     position: fixed;
     width: 100vw;
     height: 100vh;
