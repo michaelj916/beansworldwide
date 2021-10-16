@@ -53,8 +53,8 @@ a:hover {
 .vid-background iframe,
 .vid-background embed,
 .vid-background object {
-    width: 60vw;
-    height: 60vh;
+    width: 40vw;
+    height: 40vh;
     z-index: 10;
 }
 
@@ -79,10 +79,14 @@ a:hover {
     .vid-background iframe,
     .vid-background embed,
     .vid-background object {
-        width: 90vw;
-        height: 30vh;
+        width: 57vw;
+        height: 17vh;
         z-index: 10;
     }    
+
+    .vid-background {
+        top: 35%;
+    }
 
     .banner {
         top: 0%;
@@ -96,7 +100,7 @@ a:hover {
     }
 
     .nav-container {
-        top: 80%;
+        top: 55%;
     }
 
     ul {
