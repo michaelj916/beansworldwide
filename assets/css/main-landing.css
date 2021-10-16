@@ -59,14 +59,14 @@ a:hover {
 }
 
 .banner {
-    opacity: 50%;
+    opacity: 100%;
     position: fixed;
     width: 100vw;
     height: 100vh;
     z-index: -1;
 }
 
-.banner img {
+.banner video {
     width: 100%;
 }
 
